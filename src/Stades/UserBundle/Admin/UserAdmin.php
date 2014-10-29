@@ -17,7 +17,7 @@ class UserAdmin extends Admin
             ->add('firstName', 'text')
             ->add('lastName', 'text')
             ->add('email' )
-            ->add('locked')
+            ->add('locked', null, array('required' => false))
             ->add('roles', 'choice',
                 array('choices'=>
                     array('ROLE_USER' => 'Utilisateur',
