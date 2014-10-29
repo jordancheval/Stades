@@ -14,6 +14,8 @@ class UserAdmin extends Admin
     {
         $formMapper
             ->add('username')
+            ->add('fisrtName', 'text')
+            ->add('lastName', 'text')
             ->add('email' )
             ->add('locked')
             ->add('roles', 'choice',
@@ -41,11 +43,12 @@ class UserAdmin extends Admin
         $listMapper
             ->add('id')
             ->addIdentifier('username')
+            ->add('fisrtName')
+            ->add('lastName')
             ->add('email')
             ->add('locked')
             ->add('lastLogin')
             ->add('roles')
-
         ;
 
 
@@ -55,6 +58,8 @@ class UserAdmin extends Admin
     {
         $showMapper
             ->add('username')
+            ->add('fisrtName')
+            ->add('lastName')
             ->add('email')
             ->add('locked')
             ->add('lastLogin')

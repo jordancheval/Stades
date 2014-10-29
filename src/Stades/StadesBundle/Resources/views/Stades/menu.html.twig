@@ -7,7 +7,7 @@
                 Accueil
             </li>
         </a>
-        {% if is_granted('ROLE_AUTEUR') %}
+        {% if is_granted('ROLE_USER') %}
         <a class="menu-liste-link" href="{{ path('stades_stades_add') }}">
             <li class="menu-liste-link-element">
                 Ajouter
@@ -46,7 +46,7 @@
         
         {% if is_granted('ROLE_ADMIN') %}
         <div class="titre-sous-menu">Gestion utilisateurs</div>
-        <a class="menu-liste-link" href="{{ path('stades_user_list_users') }}">
+        <a class="menu-liste-link" href="{{ path('sonata_admin_dashboard') }}">
             <li class="menu-liste-link-element">
                 Utlisateurs
             </li>
