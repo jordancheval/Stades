@@ -43,7 +43,7 @@ class UserAdmin extends Admin
         $listMapper
             ->add('id')
             ->addIdentifier('username')
-            ->add('fisrtName')
+            ->add('firstName')
             ->add('lastName')
             ->add('email')
             ->add('locked')
@@ -58,7 +58,7 @@ class UserAdmin extends Admin
     {
         $showMapper
             ->add('username')
-            ->add('fisrtName')
+            ->add('firstName')
             ->add('lastName')
             ->add('email')
             ->add('locked')
