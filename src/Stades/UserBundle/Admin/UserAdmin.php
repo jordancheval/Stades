@@ -14,7 +14,7 @@ class UserAdmin extends Admin
     {
         $formMapper
             ->add('username')
-            ->add('fisrtName', 'text')
+            ->add('firstName', 'text')
             ->add('lastName', 'text')
             ->add('email' )
             ->add('locked')
