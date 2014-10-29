@@ -41,3 +41,13 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+
+/web/bundles/
+/app/bootstrap*
+/app/cache/*
+/app/logs/*
+
+/vendor/
+/app/config/parameters.yml
+/bin/

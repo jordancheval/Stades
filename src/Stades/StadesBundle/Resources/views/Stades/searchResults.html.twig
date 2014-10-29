@@ -1,0 +1,43 @@
+{% extends "StadesStadesBundle::layout.html.twig" %}
+
+{% block stades_title %}
+    {% if stades is defined %}
+        {% if stades|length < 1 %}
+            Aucun résultats pour "{{ query }}" {{ parent() }}
+        {% elseif stades|length > 1 %}
+            {{ stades|length }} résultats pour "{{ query }}" {{ parent() }}
+        {% else %}
+            {{ stades|length }} résultat pour "{{ query }}" {{ parent() }}
+        {% endif %}
+    {% else %}    
+        Aucun résultat pour "{{ query }}" {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+{% block stades_sub_title %}
+    {% if stades is defined %}
+        {% if stades|length < 1 %}
+            Aucun résultat
+        {% elseif stades|length > 1 %}
+            {{ stades|length }} résultats
+        {% else %}
+            {{ stades|length }} résultat
+        {% endif %}
+    {% else %}    
+        Aucun résultat.
+    {% endif %}
+{% endblock %}
+
+{% block stades_view %}
+    {% if stades is defined %}
+        {% for stade in stades %}
+            <a href="{{ path('stades_stades_view', {'id': stade.id}) }}" class="vignette-result">
+                {{ stade.nomStade }}
+            </a>
+        {% else %}
+            <div class="vignette"><h2>Aucun résultat</h2></div>
+        {% endfor %}
+    {% else %}    
+        <div class="vignette"><h2>Aucun résultat</h2></div>
+    {% endif %}
+{% endblock %}

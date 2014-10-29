@@ -1,0 +1,16 @@
+{% extends "StadesStadesBundle::layout.html.twig" %}
+
+{% block stades_title %}
+    Nouveau stade {{ parent() }}
+{% endblock %}
+
+{% block stades_sub_title %}
+    Ajouter
+{% endblock %}
+
+{% block stades_view %}
+    <div class="vignette">
+        <h2>Ajouter un stade</h2>
+        {{ include('StadesStadesBundle:Stades:form.html.twig') }}
+    </div>
+{% endblock %}

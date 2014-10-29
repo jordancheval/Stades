@@ -1,0 +1,16 @@
+{% extends "StadesStadesBundle::layout.html.twig" %}
+
+{% block stades_title %}
+    Accueil {{ parent() }}
+{% endblock %}
+
+{% block stades_sub_title %}
+    Accueil
+{% endblock %}
+
+{% block stades_view %}
+    <div class="vignette">
+        <h2>Dernier stade ajouté</h2>
+        <a class="vignette-link" href="{{ path('stades_stades_view', {'id': stade.id}) }}">{{ stade.nomStade }}</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{#
+{{ form_start(formSearch) }}
+
+{{ form_errors(formSearch) }}
+
+<div class="form-row">
+    {# NOM DU STADE #}
+    {# Génération de l'input. #}
+    {#<div class="form-input">{{ form_widget(formSearch.nomStade) }}</div>#}
+        
+    {# Affichage des erreurs pour ce champ précis. #}
+    {#<div class="form-error">{{ form_errors(formSearch.nomStade) }}</div>   
+</div>
+
+{{ form_rest(formSearch) }}
+{{ form_end(formSearch) }}#}
+    
+<form action="{{ path('stades_stades_searchResults') }}" method="POST">
+    <input type="text" id="stade_search" name="nomStade" required="required"/>
+    <input type="submit" value="Rechercher" />
+    {{ form_rest(formSearch) }}
+</form>

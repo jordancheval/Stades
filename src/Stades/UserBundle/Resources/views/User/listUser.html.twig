@@ -1,0 +1,21 @@
+{% extends "StadesUserBundle::layout.html.twig" %}
+
+{% block stades_title %}
+    Tous les utilisateurs
+{% endblock %}
+
+{% block stades_sub_title %}
+    Tous les utilisateurs
+{% endblock %}
+
+{% block stades_view %}
+    <div class="vignette">
+    {% for user in users %}
+        <p>
+            {{ user.username }}
+        </p>
+    {% else %}
+        <h2>Aucun utilisateur</h2>
+    {% endfor %}
+    </div>
+{% endblock %}

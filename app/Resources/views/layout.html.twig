@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <meta name="viewport" content="width=device-with; initial-scale=1, user-scalable=no">
+    <meta charset="UTF-8">
+    <title>{% block stades_title %}{% endblock %} - Stades</title>
+    {% stylesheets '@StadesStadesBundle/Resources/public/css/style.css' %}
+        <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
+    {% endstylesheets %}
+    {% javascripts '@StadesStadesBundle/Resources/public/js/jquery-1.9.1.min.js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+</head>
+<body>
+    <!-- HEADER -->
+    <div class="header">
+        <div class="btn-menu">
+            <img class="img-menu" src="css/images/btn-menu.png" alt="Menu">
+        </div>
+        <div class="title">
+            {% block stades_sub_title %}
+            {% endblock %}
+        </div>
+        <div class="form-search">
+            {{ render(controller("StadesStadesBundle:Stades:search")) }}
+        </div>
+    </div>
+    <!-- MENU -->
+    {% block stades_menu %}
+        
+    {% endblock %}
+    <!-- LIEN TO TOP -->
+    <a href="#" class="to-top">Go to top !</a>
+    <!-- CONTENU -->
+    <div class="content">
+        {% block stades_view %}
+            
+        {% endblock %}
+        
+        {% block stades_view_description %}
+                            
+        {% endblock %}
+    </div>
+    <!-- DIV pour le filtre noir quand le menu est ouvert -->
+    <div class="filter"></div>
+
+    {% javascripts '@StadesStadesBundle/Resources/public/js/script.js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+</body>
+</html>

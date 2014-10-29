@@ -1,0 +1,31 @@
+stades_stades_homepage:
+    path:     /
+    defaults: { _controller: StadesStadesBundle:Stades:index }
+
+stades_stades_view:
+    path: /view/{id}
+    defaults: { _controller: StadesStadesBundle:Stades:view }
+    requirements:
+        id: \d+
+        
+stades_stades_add:
+    path: /add
+    defaults: { _controller: StadesStadesBundle:Stades:add }
+
+stades_stades_edit:
+    path: /edit/{id}
+    defaults: { _controller: StadesStadesBundle:Stades:edit }
+    requirements:
+        id: \d+
+        
+stades_stades_delete:
+    path: /delete/{id}
+    defaults: { _controller: StadesStadesBundle:Stades:delete }
+    requirements:
+        id: \d+
+        
+stades_stades_searchResults:
+    path: /search/
+    defaults: { _controller: StadesStadesBundle:Stades:listStades }
+    requirements:
+        id: \w+

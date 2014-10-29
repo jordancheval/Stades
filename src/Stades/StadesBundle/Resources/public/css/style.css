@@ -1,0 +1,240 @@
+/*----- HTML & BODY -----*/
+html, body {
+  margin: 0;
+  font-family: sans-serif;
+  overflow: hidden; }
+
+/*----- HEADER -----*/
+.header {
+  display: inline-block;
+  width: 100%;
+  position: fixed;
+  border-bottom: 1px solid #b4b4b4;
+  z-index: 1000;
+  background-color: #fff;
+  font-size: 1em;
+  box-shadow: 0 0 20px #000;
+  opacity: 0.9; }
+  .header .btn-menu {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+    cursor: pointer; }
+    .header .btn-menu .img-menu {
+      width: 40px;
+      height: 40px; }
+  .header .title {
+    display: inline-block;
+    line-height: 40px; }
+  .header .form-search {
+      display: inline-block;
+      float: right;
+      line-height: 40px;
+      margin-right: 10px;
+  }
+
+/*----- MENU -----*/
+.menu {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  height: 100%;
+  border-right: 1px solid #b4b4b4;
+  background-color: #fff;
+  font-size: 1em;
+  width: 180px;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden; }
+  .menu .titre-sous-menu {
+    padding: 5px 0 5px 5px;
+    border-bottom: 1px solid #b4b4b4;
+    border-top: 1px solid #b4b4b4;
+    font-size: 0.9em;
+    font-weight: bold; }
+  .menu .marginMenuTop {
+    height: 40px;
+    display: block;
+    margin: 0; }
+  .menu-liste {
+    margin-top: 0;
+    padding-left: 0; }
+    .menu-liste-link {
+      display: inline-block;
+      list-style: none;
+      padding: 14px 0 14px 15px;
+      text-decoration: none;
+      color: #000;
+      width: 165px;
+      //min-height: 40px;
+      //margin: 5px 12px;
+      //border: 1px solid #b4b4b4;
+      //border-radius: 10px;
+      background-color: #fff; }
+      .menu-liste-link:hover {
+        background-color: #c5c5c5; }
+      .menu-liste-link-element {
+        list-style: none; }
+        .menu-liste-link-element img {
+          border: none; }
+  .menu .selected {
+    background-color: #25bcff; }
+
+/*----- TO TOP -----*/
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 510;
+  display: none; }
+
+/*----- CONTENT -----*/
+.content {
+  position: absolute;
+  top: 40px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  background: url(images/fond-mobile.jpg);
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  width: 100%;
+  height: auto; }
+  .content .article {
+    margin: 10px;
+    text-align: justify;
+    font-size: 1em;
+    background-color: #ffffff;
+    padding: 10px 8px;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px #7c7c7c; }
+  .container-description {
+        position: absolute;
+        z-index: 500;
+        display: inline-block;
+        top: 60px;
+        right: 20px;
+        text-align: right;
+  }
+        .container-description .toggle-description {
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            line-height: 50px;
+            width: 50px;
+            height: 50px;
+            background-color: #fff;
+            border-radius: 50em;
+            z-index: 510;
+            box-shadow: 0 1px 6px #000;
+        }
+        .description-toggle-actif {
+            box-shadow: none!important;
+        }
+        .container-description .content-description {
+            display: none;
+            margin-top: -50px;
+            text-align: left;
+            background-color: #fff;
+            padding: 50px 15px 5px 15px;
+            border-radius: 2px;
+            box-shadow: 0 3px 8px #a3a3a3;
+            font-size: 0.9em;
+        }
+  .content .vignette {
+      display: block;
+      width: 70%;
+      text-align: center;
+      background-color: #f4f4f4;
+      margin: 8px auto;
+      padding: 5px;
+      box-shadow: 0 3px 8px #a3a3a3;
+  }
+    .content .vignette h2 {
+        color: #4f4f4f;
+        font-size: 1.5em;
+    }
+    .content .vignette .vignette-link {
+        display: inline-block;
+        text-decoration: none;
+        color: #fff;
+        background-color: #4f4f4f;
+        padding: 10px;
+        margin: 5px;
+        font-size: 0.9em;
+    }
+    .content .vignette .vignette-link:hover,
+    .content .vignette .vignette-link:focus {
+        background-color: #636363;
+    }
+    .content .vignette .form-row {
+        display: block;
+        margin: 10px 0;
+        padding: 5px 0;
+    }
+        .content .vignette .form-row .form-label,
+        .content .vignette .form-row .form-error,
+        .content .vignette .form-row .form-input {
+            display: inline-block;
+        }
+        
+        .content .vignette .form-row .form-label,
+        .content .vignette .form-row .form-input {
+            width: 180px;
+        }
+        
+        .content .vignette .form-row .form-label {
+            text-align: right;
+        }
+        
+        .content .vignette .form-row .form-input {
+            text-align: left;
+        }
+        
+        .content .vignette .form-row .required-input {
+            color: red;
+        }
+        
+        .content .vignette .form-row .valign-top {
+            vertical-align: top;
+        }
+  .content .vignette-result {
+      display: inline-block;
+      width: 250px;
+      text-align: center;
+      text-decoration: none;
+      color: #4f4f4f;
+      background-color: #f4f4f4;
+      margin: 8px;
+      padding: 10px 5px;
+      box-shadow: 0 3px 8px #a3a3a3;
+  }
+  
+
+/*----- FILTER -----*/
+.filter {
+  background-color: #000;
+  opacity: 0.4;
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 900;}
+
+/*.flou {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  -o-filter: blur(2px);
+  filter: blur(2px); }*/
+
+/*----- DEMO -----*/
+.demo {
+  z-index: 1000;
+  background-color: #d71a21; }
+  .demo img {
+    vertical-align: bottom; }
+
+/*# sourceMappingURL=style.css.map */

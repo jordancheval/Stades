@@ -1,0 +1,72 @@
+    {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+    
+    {# Les erreurs générales du formulaire. #}
+    {{ form_errors(form) }}
+    
+    <div class="form-row">
+    {# NOM DU STADE #}
+        {# Génération du label. #}
+        <div class="form-label">{{ form_label(form.nomStade, "Nom du stade*") }}</div>
+
+        {# Génération de l'input. #}
+        <div class="form-input">{{ form_widget(form.nomStade) }}</div>
+        
+        {# Affichage des erreurs pour ce champ précis. #}
+        <div class="form-error">{{ form_errors(form.nomStade) }}</div>   
+    </div>
+    <div class="form-row">  
+    {# ADRESSE DU STADE #}
+        {# Génération du label. #}
+        <div class="form-label">{{ form_label(form.adresseStade, "Adresse du stade") }}</div>
+        
+        {# Génération de l'input. #}
+        <div class="form-input">{{ form_widget(form.adresseStade) }}</div>
+        
+        {# Affichage des erreurs pour ce champ précis. #}
+        <div class="form-error">{{ form_errors(form.adresseStade) }}</div>     
+    </div>
+    <div class="form-row">   
+    {# LIEN MAPS #}
+        {# Génération du label. #}
+        <div class="form-label">{{ form_label(form.lienMaps, "Lien Google Maps*") }}</div>
+        
+        {# Génération de l'input. #}
+        <div class="form-input">{{ form_widget(form.lienMaps) }}</div>
+        
+        {# Affichage des erreurs pour ce champ précis. #}
+        <div class="form-error">{{ form_errors(form.lienMaps) }}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-label valign-top">Type de terrain</div>
+        <div class="form-input">
+        {% for typeTerrain in form.typeTerrain %}
+            {# TYPE TERRAIN #}
+            {# Génération de l'input. #}
+            {{ form_widget(typeTerrain) }}{{ form_label(typeTerrain) }}
+        
+            {# Affichage des erreurs pour ce champ précis. #}
+            <div class="form-error">{{ form_errors(typeTerrain) }}</div>
+            <br>
+        {% endfor %}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="required-input">* : champs requis</div>
+    </div>
+    <div class="form-row">   
+    {# BOUTON SAVE #}
+        {# Génération de l'input. #}
+        {{ form_widget(form.save, { 'label': 'Enregistrer' }) }}
+        
+    {# BOUTON RESET #}
+        {# Génération de l'input. #}
+        {{ form_widget(form.reset, { 'label': 'Annuler' }) }}
+    </div>
+    
+    {# Génération automatique des champs pas encore écrits.
+     Dans cet exemple, ce serait le champ CSRF (géré automatiquement par Symfony !)
+     et tous les champs cachés (type « hidden »). #}
+    {{ form_rest(form) }}
+  
+    {# Fermeture de la balise <form> du formulaire HTML #}
+    {{ form_end(form) }}

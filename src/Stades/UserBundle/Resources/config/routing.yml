@@ -1,0 +1,7 @@
+stades_user_index:
+    path:     /
+    defaults: { _controller: StadesUserBundle:UserManagement:index }
+    
+stades_user_list_users:
+    path:     /all-users/
+    defaults: { _controller: StadesUserBundle:UserManagement:listUsers }

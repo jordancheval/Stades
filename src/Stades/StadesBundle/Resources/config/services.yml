@@ -1,0 +1,12 @@
+services:
+#    stades_stades.example:
+#        class: Stades\StadesBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
+
+    twig.extension.intl:
+        class: Twig_Extensions_Extension_Intl
+        tags:
+            - { name: twig.extension }
+            
+    stades_stades.urlmapsconverter:
+        class: Stades\StadesBundle\UrlMapsConverter\StadesUrlMapsConverter
