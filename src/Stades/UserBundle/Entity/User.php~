@@ -30,12 +30,14 @@ class User extends BaseUser
     }
     
     /**
-     * @ORM\Column(name="first_name", type="string", length=255, nullable=true)
+     * @ORM\Column(name="first_name", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $firstName;
     
     /**
-     * @ORM\Column(name="last_name", type="string", length=255, nullable=true)
+     * @ORM\Column(name="last_name", type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $lastName;
 

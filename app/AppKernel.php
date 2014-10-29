@@ -8,6 +8,7 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
+            // Symfony base Bundle
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -16,17 +17,18 @@ class AppKernel extends Kernel
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
-            new Stades\StadesBundle\StadesStadesBundle(),
-            new Stades\UserBundle\StadesUserBundle(),
+
+            // Downloaded Bundles
             new FOS\UserBundle\FOSUserBundle(),
             new Sonata\CoreBundle\SonataCoreBundle(),
             new Sonata\BlockBundle\SonataBlockBundle(),
             new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
             new Sonata\AdminBundle\SonataAdminBundle(),
-            new Sonata\EasyExtendsBundle\SonataEasyExtendsBundle(),
-            new Sonata\UserBundle\SonataUserBundle('FOSUserBundle'),
-            new Application\Sonata\UserBundle\ApplicationSonataUserBundle(),
+
+            // Project Bundle
+            new Stades\StadesBundle\StadesStadesBundle(),
+            new Stades\UserBundle\StadesUserBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
