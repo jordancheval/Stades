@@ -1,0 +1,15 @@
+{% extends 'StadesStadesBundle::layout.html.twig' %}
+
+{% block stades_title %}
+    {% block stades_title_user %}{% endblock %}
+{% endblock %}
+
+{% block stades_sub_title %}
+    {% block stades_sub_title_user %}{% endblock %}
+{% endblock %}
+
+{% block stades_view %}
+    <div class="vignette">
+        {% block fos_user_content %}{% endblock %}
+    </div>
+{% endblock %}

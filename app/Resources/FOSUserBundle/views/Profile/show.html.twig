@@ -1,0 +1,21 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block stades_title_user %}
+    Mon profil
+{% endblock %}
+
+{% block stades_sub_title_user %}
+    Mon profil
+{% endblock %}
+
+{% block fos_user_content %}
+    <h2>Mon profil</h2>
+
+    <a class="vignette-link" href="{{ path('fos_user_profile_edit') }}">
+        Éditer mon profil
+    </a>
+    <a class="vignette-link" href="{{ path('fos_user_change_password') }}">
+        Modifier mon mot de passe
+    </a>
+    {% include "FOSUserBundle:Profile:show_content.html.twig" %}
+{% endblock fos_user_content %}

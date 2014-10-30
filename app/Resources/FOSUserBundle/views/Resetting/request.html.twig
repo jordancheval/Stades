@@ -1,0 +1,14 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block stades_title_user %}
+    Mot de passe perdu
+{% endblock %}
+
+{% block stades_sub_title_user %}
+    Mot de passe perdu
+{% endblock %}
+
+{% block fos_user_content %}
+    <h2>Mot de passe perdu</h2>
+{% include "FOSUserBundle:Resetting:request_content.html.twig" %}
+{% endblock fos_user_content %}

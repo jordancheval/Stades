@@ -20,11 +20,13 @@
                 Modifier
             </li>
         </a>
-            <a class="menu-liste-link" href="{{ path('stades_stades_delete', {'id' : stade.id}) }}">
+        {% if is_granted('ROLE_ADMIN') %}
+        <a class="menu-liste-link" href="{{ path('stades_stades_delete', {'id' : stade.id}) }}">
             <li class="menu-liste-link-element">
                 Supprimer
             </li>
         </a>
+        {% endif %}
         {% endif %}
         {% endif %}
         
@@ -33,6 +35,11 @@
         <a class="menu-liste-link" href="{{ path('fos_user_security_logout') }}">
             <li class="menu-liste-link-element">
                 Déconnexion
+            </li>
+        </a>
+        <a class="menu-liste-link" href="{{ path('fos_user_profile_show') }}">
+            <li class="menu-liste-link-element">
+                Mon profil
             </li>
         </a>
         {% else %}
