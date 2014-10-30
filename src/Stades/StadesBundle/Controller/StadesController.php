@@ -15,6 +15,9 @@ class StadesController extends Controller
 {
     public function indexAction()
     {
+        /**
+         * Pour l'instant, la page d'accueil retourne le dernier stade ajouté
+         */
         $stade = $this->getDoctrine()->getManager()->getRepository('StadesStadesBundle:Stades')->getLastStade();
         
         return $this->render('StadesStadesBundle:Stades:index.html.twig', array(
@@ -30,8 +33,10 @@ class StadesController extends Controller
             throw new NotFoundHttpException("Le stade n'existe pas.");
         }
         
+        // Convertir l'adresse viewer de Maps en adresse embed
         $url = $this->container->get('stades_stades.urlmapsconverter');
         
+        // Convertir l'adresse viewer de Maps en adresse embed
         $urlMaps = $url->convertUrl($stade->getLienMaps());
         
         return $this->render('StadesStadesBundle:Stades:view.html.twig', array(

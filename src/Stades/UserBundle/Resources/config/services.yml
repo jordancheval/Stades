@@ -8,6 +8,8 @@ services:
         class: Stades\UserBundle\Admin\UserAdmin
         tags:
             - { name: sonata.admin, manager_type: orm, group: Utilisateurs, label: "Utilisateurs" }
+        calls:
+          - [setUserManager, ["@fos_user.user_manager"]]
         arguments:
             - ~
             - Stades\UserBundle\Entity\User
