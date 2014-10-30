@@ -26,7 +26,8 @@ $RECYCLE.BIN/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -51,5 +52,6 @@ Temporary Items
 /vendor/
 /app/config/parameters.yml
 /bin/
+/nbproject/
 .idea*
 .fuse*
