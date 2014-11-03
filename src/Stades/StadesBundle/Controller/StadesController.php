@@ -19,9 +19,13 @@ class StadesController extends Controller
          * Pour l'instant, la page d'accueil retourne le dernier stade ajouté
          */
         $stade = $this->getDoctrine()->getManager()->getRepository('StadesStadesBundle:Stades')->getLastStade();
+
+        if (null === $stade) {
+            throw new NotFoundHttpException("Aucun stade :-(");
+        }
         
         return $this->render('StadesStadesBundle:Stades:index.html.twig', array(
-            'stade' => $stade[0]
+            'stade' => $stade
         ));
     }
     

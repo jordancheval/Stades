@@ -30,8 +30,10 @@
             <p>
                 {% if stade.typeTerrain|length > 1 %}
                     Terrains
-                {% else %}
+                {% elseif stade.typeTerrain|length > 0 %}
                     Terrain
+                {% else %}
+                    Terrain non renseigné.
                 {% endif %}
                 <ul>
                 {% for typeTerrain in stade.typeTerrain %}

@@ -10,7 +10,11 @@
 
 {% block stades_view %}
     <div class="vignette">
-        <h2>Dernier stade ajouté</h2>
-        <a class="vignette-link" href="{{ path('stades_stades_view', {'id': stade.id}) }}">{{ stade.nomStade }}</a>
+        {% for lastStade in stade %}
+            <h2>Dernier stade ajouté</h2>
+            <a class="vignette-link" href="{{ path('stades_stades_view', {'id': lastStade.id }) }}">{{ lastStade.nomStade }}</a>
+        {% else %}
+            <h2>Aucun stade</h2>
+        {% endfor %}
     </div>
 {% endblock %}
