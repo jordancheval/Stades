@@ -123,7 +123,7 @@ html, body {
             display: inline-block;
             cursor: pointer;
             text-align: center;
-            line-height: 50px;
+            line-height: 80px;
             width: 50px;
             height: 50px;
             background-color: #fff;
@@ -152,6 +152,7 @@ html, body {
       margin: 8px auto;
       padding: 5px;
       box-shadow: 0 3px 8px #a3a3a3;
+      border-radius: 2px;
   }
     .content .vignette h2 {
         color: #4f4f4f;
@@ -165,6 +166,7 @@ html, body {
         padding: 10px;
         margin: 5px;
         font-size: 0.9em;
+        border-radius: 2px;
     }
     .content .vignette .vignette-link:hover,
     .content .vignette .vignette-link:focus {
@@ -229,6 +231,13 @@ html, body {
   -moz-filter: blur(2px);
   -o-filter: blur(2px);
   filter: blur(2px); }*/
+
+/*----- INPUT -----*/
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid #BEBEBE;
+    background-color: transparent;
+}
 
 /*----- DEMO -----*/
 .demo {

@@ -12,6 +12,9 @@ jQuery(document).ready(function(){
         toTop = jQuery(".to-top"),
         toggleDescription = jQuery(".toggle-description"),
         description = jQuery(".content-description"),
+        lienBtnBack = "/Stades/web/images/btn-back.png",
+        lienBtnMenu = "/Stades/web/images/btn-menu.png",
+        btnMenu = jQuery('.btn-menu').children("img"),
         speed = 150;
     
     /*
@@ -37,6 +40,7 @@ jQuery(document).ready(function(){
             jQuery(".filter").fadeOut(speed);
             jQuery(".content").removeClass("flou");
             touchMoveOn();
+            btnMenu.attr("src", lienBtnMenu);
         }
         else{
             menu.animate({marginLeft: 0}, speed);
@@ -46,6 +50,7 @@ jQuery(document).ready(function(){
             jQuery(".filter").fadeIn(speed);
             jQuery(".content").addClass("flou");
             touchMoveOff();
+            btnMenu.attr("src", lienBtnBack);
         }
     }
     
@@ -63,6 +68,7 @@ jQuery(document).ready(function(){
             jQuery(".filter").fadeOut(speed);
             jQuery(".content").removeClass("flou");
             touchMoveOn();
+            btnMenu.attr("src", lienBtnMenu);
         }
     }
     
