@@ -233,7 +233,9 @@ html, body {
   filter: blur(2px); }*/
 
 /*----- INPUT -----*/
-input[type=text] {
+input[type=text],
+input[type=email],
+input[type=password] {
     border: none;
     border-bottom: 1px solid #BEBEBE;
     background-color: transparent;
