@@ -85,3 +85,7 @@ sonata_block:
             contexts:   [admin]
         sonata.user.block.menu:    # used to display the menu in profile pages
         sonata.user.block.account: # used to display menu option (login option)
+        
+sonata_admin:
+    templates:
+        layout: StadesUserBundle::layout.html.twig

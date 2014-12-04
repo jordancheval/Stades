@@ -97,8 +97,8 @@ html, body {
   bottom: 0;
   right: 0;
   left: 0;
-  background-color: #fff;
-  background: url(images/fond-mobile.jpg);
+  background-color: #f4f4f4;
+  //background: url(images/fond-mobile.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
   width: 100%;
@@ -148,7 +148,7 @@ html, body {
       display: block;
       width: 70%;
       text-align: center;
-      background-color: #f4f4f4;
+      background-color: #fff;
       margin: 8px auto;
       padding: 5px;
       box-shadow: 0 3px 8px #a3a3a3;
