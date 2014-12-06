@@ -20,7 +20,7 @@
 
 {% endblock %}
 
-        {% block add_javascripts %}
+{% block add_javascripts %}
             <script>
                 window.SONATA_CONFIG = {
                     CONFIRM_EXIT: {% if admin_pool is defined and admin_pool.getOption('confirm_exit') %}true{% else %}false{% endif %},
@@ -47,7 +47,7 @@
                 {% endif %}
             {% endif %}
 
-        {% endblock %}
+{% endblock %}
 
 {% block stades_view %}
         {% block sonata_wrapper %}
@@ -127,43 +127,6 @@
 
                 <aside class="right-side">
                     {% block sonata_page_content %}
-                        <section class="content-header">
-                            {% block sonata_page_content_header %}
-                                {% block sonata_page_content_nav %}
-                                    {% if _tab_menu is not empty or _actions is not empty %}
-                                        <nav class="navbar navbar-default" role="navigation">
-                                            {% block tab_menu_navbar_header %}
-                                                {% if _navbar_title is not empty %}
-                                                    <div class="navbar-header">
-                                                        <span class="navbar-brand">{{ _navbar_title|raw }}</span>
-                                                    </div>
-                                                {% endif %}
-                                            {% endblock %}
-                                            <div class="container-fluid">
-                                                <div class="navbar-left">
-                                                    {% if _tab_menu is not empty %}
-                                                        {{ _tab_menu|raw }}
-                                                    {% endif %}
-                                                </div>
-
-                                                {% if _actions|replace({ '<li>': '', '</li>': '' })|trim is not empty %}
-                                                    <ul class="nav navbar-nav navbar-right">
-                                                        <li class="dropdown sonata-actions">
-                                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ 'link_actions'|trans({}, 'SonataAdminBundle') }} <b class="caret"></b></a>
-                                                            <ul class="dropdown-menu" role="menu">
-                                                                {{ _actions|raw }}
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                {% endif %}
-                                            </div>
-                                        </nav>
-                                    {% endif %}
-                                {% endblock sonata_page_content_nav %}
-
-                            {% endblock sonata_page_content_header %}
-                        </section>
-
                         <section class="content">
                             {% block sonata_admin_content %}
 

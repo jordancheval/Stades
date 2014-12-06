@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-with; initial-scale=1, user-scalable=no">
     <meta charset="UTF-8">
     <title>{% block stades_title %}{% endblock %} - Stades</title>
+    {% block add_stylesheets %}
+
+    {% endblock %}
     {% stylesheets '@StadesStadesBundle/Resources/public/css/style.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
     {% javascripts '@StadesStadesBundle/Resources/public/js/jquery-1.9.1.min.js' %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
-    {% block add_stylesheets %}
-        
-    {% endblock %}
     {% block add_javascripts %}
         
     {% endblock %}
