@@ -2,13 +2,18 @@
 html, body {
   margin: 0;
   font-family: sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   overflow: hidden; }
 
 /*----- HEADER -----*/
 .header {
   display: inline-block;
   width: 100%;
-  position: fixed;
+  position: fixed !important;
   border-bottom: 1px solid #b4b4b4;
   z-index: 1000;
   background-color: #fff;
@@ -37,7 +42,7 @@ html, body {
 /*----- MENU -----*/
 .menu {
   display: inline-block;
-  position: absolute;
+  position: fixed;
   top: 0;
   z-index: 999;
   height: 100%;
@@ -101,8 +106,10 @@ html, body {
   //background: url(images/fond-mobile.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
-  width: 100%;
-  height: auto; }
+  width: 100%;.
+  //max-height: 100%;
+  overflow-y: auto;
+  /*height: auto;*/ }
   .content .article {
     margin: 10px;
     text-align: justify;
