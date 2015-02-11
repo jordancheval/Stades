@@ -106,7 +106,7 @@ html, body {
   //background: url(images/fond-mobile.jpg);
   background-repeat: no-repeat;
   background-attachment: scroll;
-  width: 100%;.
+  width: 100%;
   //max-height: 100%;
   overflow-y: auto;
   /*height: auto;*/ }
@@ -179,24 +179,26 @@ html, body {
     .content .vignette .vignette-link:focus {
         background-color: #636363;
     }
+    
     .content .vignette .form-row {
         display: block;
-        margin: 10px 0;
+        margin: 15px 0;
         padding: 5px 0;
     }
         .content .vignette .form-row .form-label,
         .content .vignette .form-row .form-error,
         .content .vignette .form-row .form-input {
-            display: inline-block;
+            display: block;
         }
         
         .content .vignette .form-row .form-label,
         .content .vignette .form-row .form-input {
-            width: 180px;
+            //width: 180px;
+            padding: 2px 0;
         }
         
         .content .vignette .form-row .form-label {
-            text-align: right;
+            text-align: left;
         }
         
         .content .vignette .form-row .form-input {
