@@ -3,8 +3,8 @@
         {% if invalid_username is defined %}
             <p>{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}, 'FOSUserBundle') }}</p>
         {% endif %}
-        <label for="username">{{ 'resetting.request.username'|trans({}, 'FOSUserBundle') }}</label>
-        <input type="text" id="username" name="username" required="required" />
+        <div class="form-label text-align-center"><label for="username">{{ 'resetting.request.username'|trans({}, 'FOSUserBundle') }}</label></div>
+        <div class="form-input text-align-center"><input type="text" id="username" name="username" required="required" /></div>
     </div>
     <div>
         <input type="submit" value="{{ 'resetting.request.submit'|trans({}, 'FOSUserBundle') }}" />

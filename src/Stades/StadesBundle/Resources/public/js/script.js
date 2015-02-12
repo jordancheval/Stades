@@ -15,6 +15,7 @@ jQuery(document).ready(function(){
         lienBtnBack = "/Stades/web/images/btn-back.png",
         lienBtnMenu = "/Stades/web/images/btn-menu.png",
         btnMenu = jQuery('.btn-menu').children("img"),
+        searchInput = jQuery("#stade_search"),
         speed = 150;
     
     /*
@@ -144,10 +145,21 @@ jQuery(document).ready(function(){
         
     }*/
     
+    /**
+     * hideShowSearch
+     * 
+     * Permet d'afficher ou non la barre de recherche
+     */
+    function hideShowSearch() {
+        searchInput.toggle(speed);
+    }
+    
     /*
      * Appels de fonctions en fonction des évènements
      */
     jQuery(".btn-menu").click(hideShowMenu);
+    jQuery(".btn-search").click(function(){hideShowSearch(); searchInput.focus();});
+    searchInput.focusout(hideShowSearch);
     //jQuery(".content").click(hideMenuOnly);
     jQuery(".filter").click(hideMenuOnly);
     toggleDescription.click(hideShowDescription);

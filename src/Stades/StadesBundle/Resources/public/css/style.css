@@ -20,7 +20,8 @@ html, body {
   font-size: 1em;
   box-shadow: 0 0 20px #000;
   opacity: 0.9; }
-  .header .btn-menu {
+  .header .btn-menu,
+  .header .btn-search {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -34,10 +35,14 @@ html, body {
     line-height: 40px; }
   .header .form-search {
       display: inline-block;
-      float: right;
+      position: absolute;
+      right: 10px;
+      background-color: #fff;
       line-height: 40px;
-      margin-right: 10px;
   }
+    .header .form-search form #stade_search {
+        display: none;
+    }
 
 /*----- MENU -----*/
 .menu {
@@ -48,7 +53,7 @@ html, body {
   height: 100%;
   border-right: 1px solid #b4b4b4;
   background-color: #fff;
-  font-size: 1em;
+  font-size: 0.9em !important;
   width: 180px;
   padding: 0;
   overflow-y: auto;
@@ -72,16 +77,16 @@ html, body {
       padding: 14px 0 14px 15px;
       text-decoration: none;
       color: #000;
-      width: 165px;
+      width: 165px !important;
       //min-height: 40px;
       //margin: 5px 12px;
       //border: 1px solid #b4b4b4;
       //border-radius: 10px;
       background-color: #fff; }
       .menu-liste-link:hover {
-        background-color: #c5c5c5; }
+        background-color: #c5c5c5 !important; }
       .menu-liste-link-element {
-        list-style: none; }
+        list-style: none !important; }
         .menu-liste-link-element img {
           border: none; }
   .menu .selected {
@@ -98,6 +103,11 @@ html, body {
 /*----- CONTENT -----*/
 .content {
   position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
   top: 40px;
   bottom: 0;
   right: 0;
@@ -180,6 +190,15 @@ html, body {
         background-color: #636363;
     }
     
+    .content .vignette .resetting {
+        background-color: #F44336;
+    }
+    
+    .content .vignette .resetting:hover,
+    .content .vignette .resetting:focus {
+        background-color: #C62828;
+    }
+    
     .content .vignette .form-row {
         display: block;
         margin: 15px 0;
@@ -218,10 +237,19 @@ html, body {
       text-align: center;
       text-decoration: none;
       color: #4f4f4f;
-      background-color: #f4f4f4;
+      background-color: #fff;
+      border-radius: 2px;
       margin: 8px;
       padding: 10px 5px;
       box-shadow: 0 3px 8px #a3a3a3;
+  }
+  
+  .text-align-center {
+      text-align: center !important;
+  }
+  
+  .hidden {
+      display: none !important;
   }
   
 

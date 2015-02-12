@@ -16,7 +16,8 @@
 {{ form_end(formSearch) }}#}
     
 <form action="{{ path('stades_stades_searchResults') }}" method="POST">
+    <img class="btn-search" src="{{ asset('images/btn-search.png') }}" />
     <input type="text" id="stade_search" name="nomStade" required="required"/>
-    <input type="submit" value="Rechercher" />
+    <input class="hidden" type="submit" value="Rechercher" />
     {{ form_rest(formSearch) }}
 </form>

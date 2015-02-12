@@ -19,13 +19,13 @@
     <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
     
     <div class="form-row">
-        <div class="form-label"><label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label></div>
-        <div class="form-input"><input type="text" id="username" name="_username" value="{{ last_username }}" required="required" /></div>
+        <div class="form-label text-align-center"><b><label for="username">{{ 'security.login.username'|trans({}, 'FOSUserBundle') }}</label></b></div>
+        <div class="form-input text-align-center"><input type="text" id="username" name="_username" value="{{ last_username }}" required="required" /></div>
     </div>
     
     <div class="form-row">
-        <div class="form-label"><label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label></div>
-        <div class="form-input"><input type="password" id="password" name="_password" required="required" /></div>
+        <div class="form-label text-align-center"><b><label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label></b></div>
+        <div class="form-input text-align-center"><input type="password" id="password" name="_password" required="required" /></div>
     </div>
         
     <div class="form-row">  
@@ -36,7 +36,7 @@
     <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans({}, 'FOSUserBundle') }}" />
 </form>
 <br><br>
-    <a href="{{ path('fos_user_resetting_request') }}">
+    <a class="vignette-link resetting" href="{{ path('fos_user_resetting_request') }}">
         J'ai oublié mon mot de passe
     </a>
 {% endblock fos_user_content %}
