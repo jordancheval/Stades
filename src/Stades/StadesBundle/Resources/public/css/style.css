@@ -103,11 +103,7 @@ html, body {
 /*----- CONTENT -----*/
 .content {
   position: absolute;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: baseline;
-  flex-wrap: wrap;
+  text-align: center;
   top: 40px;
   bottom: 0;
   right: 0;
@@ -161,6 +157,9 @@ html, body {
             box-shadow: 0 3px 8px #a3a3a3;
             font-size: 0.9em;
         }
+            .container-description .content-description input {
+                width: 100%;
+            }
   .content .vignette {
       display: block;
       width: 70%;
@@ -201,7 +200,7 @@ html, body {
     
     .content .vignette .form-row {
         display: block;
-        margin: 15px 0;
+        margin: 15px;
         padding: 5px 0;
     }
         .content .vignette .form-row .form-label,
@@ -231,17 +230,28 @@ html, body {
         .content .vignette .form-row .valign-top {
             vertical-align: top;
         }
-  .content .vignette-result {
-      display: inline-block;
-      width: 250px;
-      text-align: center;
+  
+   .content .list-title-result {
+      display: block;
+      text-align: left;
+      font-weight: bold;
+      color: #8C8C8C;
+      padding: 5px 0;
+      font-size: 0.9em;
+   }
+   .content .vignette-result {
+      display: block;
+      text-align: left;
       text-decoration: none;
       color: #4f4f4f;
       background-color: #fff;
-      border-radius: 2px;
-      margin: 8px;
-      padding: 10px 5px;
-      box-shadow: 0 3px 8px #a3a3a3;
+      padding: 15px 10px;
+      transition: background-color 0.2s ease-in-out;
+  }
+  
+  .content .vignette-result:hover,
+  .content .vignette-result:focus {
+      background-color: #EFEFEF;
   }
   
   .text-align-center {
@@ -250,6 +260,10 @@ html, body {
   
   .hidden {
       display: none !important;
+  }
+  
+  .sonata-ba-form {
+      text-align: left;
   }
   
 

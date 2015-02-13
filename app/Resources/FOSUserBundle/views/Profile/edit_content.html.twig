@@ -1,18 +1,18 @@
 <form action="{{ path('fos_user_profile_edit') }}" {{ form_enctype(form) }} method="POST" class="fos_user_profile_edit">
     <div class="form-row">
-        <div class="form-label"><b>{{ form_label(form.username) }}</b></div>
+        <div class="form-label"><b>{{ form_label(form.username, "Nom d'utilisateur") }}</b></div>
         <div class="form-input">{{ form_widget(form.username) }}</div>
         <div class="form-error">{{ form_errors(form.username) }}</div>
     </div>
     
     <div class="form-row">
-        <div class="form-label"><b>{{ form_label(form.email) }}</b></div>
+        <div class="form-label"><b>{{ form_label(form.email, "Adresse e-mail") }}</b></div>
         <div class="form-input">{{ form_widget(form.email) }}</div>
         <div class="form-error">{{ form_errors(form.email) }}</div>
     </div>
     
     <div class="form-row">
-        <div class="form-label"><b>{{ form_label(form.current_password) }}</b></div>
+        <div class="form-label"><b>{{ form_label(form.current_password, "Mot de passe actuel") }}</b></div>
         <div class="form-input">{{ form_widget(form.current_password) }}</div>
         <div class="form-error">{{ form_errors(form.current_password) }}</div>
     </div>

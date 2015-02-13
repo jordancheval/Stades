@@ -22,8 +22,8 @@
 
             <p>{{ stade.adresseStade }}</p>
     
-            {% if is_granted('ROLE_AUTEUR') %}
-                <p>{{ url }}</p>
+            {% if is_granted('ROLE_USER') %}
+                <input readonly="readonly" value="{{ url }}" onClick="this.select();" />
             {% endif %}
 
             <p>Ajouté le {{ stade.dateAjout|localizeddate('long', 'none', 'en') }}</p>

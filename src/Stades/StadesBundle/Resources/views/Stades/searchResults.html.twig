@@ -29,15 +29,24 @@
 {% endblock %}
 
 {% block stades_view %}
+    <div class="vignette">
     {% if stades is defined %}
+        {% if stades|length < 1 %}
+            
+        {% elseif stades|length > 1 %}
+            <div class="list-title-result">{{ stades|length }} résultats</div>
+        {% else %}
+            <div class="list-title-result">{{ stades|length }} résultat</div>
+        {% endif %}
         {% for stade in stades %}
             <a href="{{ path('stades_stades_view', {'id': stade.id}) }}" class="vignette-result">
                 {{ stade.nomStade }}
             </a>
         {% else %}
-            <div class="vignette"><h2>Aucun résultat</h2></div>
+            <h2>Aucun résultat</h2>
         {% endfor %}
     {% else %}    
-        <div class="vignette"><h2>Aucun résultat</h2></div>
+        <h2>Aucun résultat</h2>
     {% endif %}
+    </div>
 {% endblock %}

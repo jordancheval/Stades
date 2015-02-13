@@ -6,7 +6,7 @@
     <div class="form-row">
     {# NOM DU STADE #}
         {# Génération du label. #}
-        <div class="form-label">{{ form_label(form.nomStade, "Nom du stade*") }}</div>
+        <div class="form-label"><b>{{ form_label(form.nomStade, "Nom du stade*") }}</b></div>
 
         {# Génération de l'input. #}
         <div class="form-input">{{ form_widget(form.nomStade) }}</div>
@@ -17,7 +17,7 @@
     <div class="form-row">  
     {# ADRESSE DU STADE #}
         {# Génération du label. #}
-        <div class="form-label">{{ form_label(form.adresseStade, "Adresse du stade") }}</div>
+        <div class="form-label"><b>{{ form_label(form.adresseStade, "Adresse du stade") }}</b></div>
         
         {# Génération de l'input. #}
         <div class="form-input">{{ form_widget(form.adresseStade) }}</div>
@@ -28,7 +28,7 @@
     <div class="form-row">   
     {# LIEN MAPS #}
         {# Génération du label. #}
-        <div class="form-label">{{ form_label(form.lienMaps, "Lien Google Maps*") }}</div>
+        <div class="form-label"><b>{{ form_label(form.lienMaps, "Lien Google Maps*") }}</b></div>
         
         {# Génération de l'input. #}
         <div class="form-input">{{ form_widget(form.lienMaps) }}</div>
@@ -37,7 +37,7 @@
         <div class="form-error">{{ form_errors(form.lienMaps) }}</div>
     </div>
     <div class="form-row">
-        <div class="form-label valign-top">Type de terrain</div>
+        <div class="form-label valign-top"><b>Type de terrain</b></div>
         <div class="form-input">
         {% for typeTerrain in form.typeTerrain %}
             {# TYPE TERRAIN #}
