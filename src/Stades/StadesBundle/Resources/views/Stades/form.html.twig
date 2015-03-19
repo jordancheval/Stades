@@ -26,15 +26,26 @@
         <div class="form-error">{{ form_errors(form.adresseStade) }}</div>     
     </div>
     <div class="form-row">   
-    {# LIEN MAPS #}
+    {# LATITUDE #}
         {# Génération du label. #}
-        <div class="form-label"><b>{{ form_label(form.lienMaps, "Lien Google Maps*") }}</b></div>
+        <div class="form-label"><b>{{ form_label(form.latitude, "Latitude*") }}</b></div>
         
         {# Génération de l'input. #}
-        <div class="form-input">{{ form_widget(form.lienMaps) }}</div>
+        <div class="form-input">{{ form_widget(form.latitude) }}</div>
         
         {# Affichage des erreurs pour ce champ précis. #}
-        <div class="form-error">{{ form_errors(form.lienMaps) }}</div>
+        <div class="form-error">{{ form_errors(form.latitude) }}</div>
+    </div>
+    <div class="form-row">   
+    {# LONGITUDE #}
+        {# Génération du label. #}
+        <div class="form-label"><b>{{ form_label(form.longitude, "Latitude*") }}</b></div>
+        
+        {# Génération de l'input. #}
+        <div class="form-input">{{ form_widget(form.longitude) }}</div>
+        
+        {# Affichage des erreurs pour ce champ précis. #}
+        <div class="form-error">{{ form_errors(form.longitude) }}</div>
     </div>
     <div class="form-row">
         <div class="form-label valign-top"><b>Type de terrain</b></div>

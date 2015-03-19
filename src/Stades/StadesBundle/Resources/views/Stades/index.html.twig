@@ -9,12 +9,18 @@
 {% endblock %}
 
 {% block stades_view %}
-    <div class="vignette">
-        {% for lastStade in stade %}
+    {% for lastStade in stade %}
+        <div class="vignette">
             <h2>Dernier stade ajouté</h2>
             <a class="vignette-link" href="{{ path('stades_stades_view', {'id': lastStade.id }) }}">{{ lastStade.nomStade }}</a>
-        {% else %}
+        </div>
+        <div class="vignette">
+            <h2>Nombre de stades</h2>
+            <p>{{ count }}</p>
+        </div>
+    {% else %}
+        <div class="vignette">
             <h2>Aucun stade</h2>
-        {% endfor %}
-    </div>
+        </div>
+    {% endfor %}
 {% endblock %}

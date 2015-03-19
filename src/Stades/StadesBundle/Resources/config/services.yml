@@ -10,3 +10,6 @@ services:
             
     stades_stades.urlmapsconverter:
         class: Stades\StadesBundle\UrlMapsConverter\StadesUrlMapsConverter
+        
+    stades_stades.generatemapsurl:
+        class: Stades\StadesBundle\GenerateMapsUrl\StadesGenerateMapsUrl

@@ -6,6 +6,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Stades\StadesBundle\UrlMapsConverter\StadesUrlMapsConverter;
+use Stades\StadesBundle\GenerateMapsUrl\StadesGenerateMapsUrl;
 use Stades\StadesBundle\Entity\Stades;
 use Stades\StadesBundle\Entity\TypeTerrain;
 use Stades\StadesBundle\Form\StadesType;
@@ -15,17 +16,22 @@ class StadesController extends Controller
 {
     public function indexAction()
     {
+        $stadeRepository = $this->getDoctrine()->getManager()->getRepository('StadesStadesBundle:Stades');
         /**
          * Pour l'instant, la page d'accueil retourne le dernier stade ajouté
          */
-        $stade = $this->getDoctrine()->getManager()->getRepository('StadesStadesBundle:Stades')->getLastStade();
+        $stade = $stadeRepository->getLastStade();
+        
+        // Nombre de stades au total
+        $stadeCount = $stadeRepository->getCountStades();
 
         if (null === $stade) {
             throw new NotFoundHttpException("Aucun stade :-(");
         }
         
         return $this->render('StadesStadesBundle:Stades:index.html.twig', array(
-            'stade' => $stade
+            'stade' => $stade,
+            'count' => $stadeCount
         ));
     }
     
@@ -37,14 +43,17 @@ class StadesController extends Controller
             throw new NotFoundHttpException("Le stade n'existe pas.");
         }
         
-        // Convertir l'adresse viewer de Maps en adresse embed
-        $url = $this->container->get('stades_stades.urlmapsconverter');
+        // Lien vers la carte
+        $lat = $stade->getLatitude();
+        $lon = $stade->getLongitude();
         
-        // Convertir l'adresse viewer de Maps en adresse embed
-        $urlMaps = $url->convertUrl($stade->getLienMaps());
+        $url = $this->container->get('stades_stades.generatemapsurl');
+        $urlMapsEmbed = $url->generateUrlEmbed($lat, $lon);
+        $urlMaps = $url->generateUrlMaps($lat, $lon);
         
         return $this->render('StadesStadesBundle:Stades:view.html.twig', array(
             'stade' => $stade,
+            'urlEmbed' => $urlMapsEmbed,
             'url' => $urlMaps
         ));
     }

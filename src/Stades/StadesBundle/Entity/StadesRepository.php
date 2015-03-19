@@ -13,7 +13,7 @@ use Doctrine\ORM\QueryBuilder;
  */
 class StadesRepository extends EntityRepository
 {
-    public function getUrlMaps($id)
+    /*public function getUrlMaps($id)
     {
         return $this
                 ->createQueryBuilder('a')
@@ -23,7 +23,7 @@ class StadesRepository extends EntityRepository
                 ->getQuery()
                 ->getResult()
         ;
-    }
+    }*/
     
     public function getLastStade()
     {
@@ -46,5 +46,12 @@ class StadesRepository extends EntityRepository
                 ->getQuery()
                 ->getResult()
         ;
+    }
+    
+    public function getCountStades() {
+        return $this->createQueryBuilder('a')
+                ->select('COUNT(a)')
+                ->getQuery()
+                ->getSingleScalarResult();
     }
 }

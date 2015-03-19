@@ -42,11 +42,18 @@ class Stades
     private $adresseStade;
 
     /**
-     * @var string
+     * @var float
      *
-     * @ORM\Column(name="lien_maps", type="string", length=255)
+     * @ORM\Column(name="latitude", type="float")
      */
-    private $lienMaps;
+    private $latitude;
+    
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="longitude", type="float")
+     */
+    private $longitude;
     
     /**
      * @var \Datetime
@@ -118,29 +125,6 @@ class Stades
     }
 
     /**
-     * Set lienMaps
-     *
-     * @param string $lienMaps
-     * @return Stades
-     */
-    public function setLienMaps($lienMaps)
-    {
-        $this->lienMaps = $lienMaps;
-
-        return $this;
-    }
-
-    /**
-     * Get lienMaps
-     *
-     * @return string 
-     */
-    public function getLienMaps()
-    {
-        return $this->lienMaps;
-    }
-
-    /**
      * Set dateAjout
      *
      * @param \DateTime $dateAjout
@@ -194,5 +178,51 @@ class Stades
     public function getTypeTerrain()
     {
         return $this->typeTerrain;
+    }
+
+    /**
+     * Set latitude
+     *
+     * @param float $latitude
+     * @return Stades
+     */
+    public function setLatitude($latitude)
+    {
+        $this->latitude = $latitude;
+
+        return $this;
+    }
+
+    /**
+     * Get latitude
+     *
+     * @return float 
+     */
+    public function getLatitude()
+    {
+        return $this->latitude;
+    }
+
+    /**
+     * Set longitude
+     *
+     * @param float $longitude
+     * @return Stades
+     */
+    public function setLongitude($longitude)
+    {
+        $this->longitude = $longitude;
+
+        return $this;
+    }
+
+    /**
+     * Get longitude
+     *
+     * @return float 
+     */
+    public function getLongitude()
+    {
+        return $this->longitude;
     }
 }
