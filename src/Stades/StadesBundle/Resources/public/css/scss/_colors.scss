@@ -1,0 +1,67 @@
+// Background-colors
+$bcHeader : #fff;
+
+$bcMenu : $bcHeader;
+$bcMenuListeLink : $bcHeader;
+$bcMenuSelected : #25bcff;
+
+$bcContent : #f4f4f4;
+$bcArticle : #fff;
+$bcToggleDescription : #fff;
+$bcContentDescription : $bcToggleDescription;
+$bcVignette : #fff;
+$bcVignetteLink : #4f4f4f;
+
+$bcResetting : #F44336;
+
+$bcVignetteResult : #fff;
+
+$bcFilter : #000;
+
+$bcInputText : transparent;
+
+$bcSubmit : #3679F4;
+$bcReset : #A9A9A9;
+
+//Background-colors hover
+$bchMenuListeLink : #c5c5c5 !important;
+
+$bchVignetteLink : #636363;
+
+$bchResetting : #C62828;
+
+$bchVignetteResult : #EFEFEF;
+
+$bchSubmit : #1C62E5;
+$bchReset : #676767;
+
+// Colors
+$cMenuListeLink : #000;
+
+$cVignetteH2 : #4f4f4f;
+$cVignetteLink : #fff;
+
+$cRequiredInput : red;
+
+$cListTitleResult : #8C8C8C;
+
+$cVignetteResult : #4f4f4f;
+
+$cInputSubRes : #fff;
+
+// Borders
+$bbHeader : 1px solid #b4b4b4;
+
+$brMenu : $bbHeader;
+$btTitreSousMenu : $bbHeader;
+$bbTitreSousMenu : $bbHeader;
+
+$bbInputText : 1px solid #BEBEBE;
+
+// Box-shadows
+$bsHeader : 0 0 20px #000;
+
+$bsArticle : 0 2px 3px #7c7c7c;
+$bsToggleDescription : 0 1px 6px #000;
+$bsContentDescription : 0 3px 8px #a3a3a3;
+$bsVignette : 0 3px 8px #a3a3a3;

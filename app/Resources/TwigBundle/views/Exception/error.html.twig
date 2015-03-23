@@ -1,0 +1,15 @@
+{% extends "TwigBundle::layout.html.twig" %}
+
+
+{% block stades_title_error %}
+    Erreur {{ status_text }}
+{% endblock %}
+
+{% block stades_sub_title_error %}
+    Erreur {{ status_code }}
+{% endblock %}
+
+{% block  stades_view_error %}
+    <h2>Erreur {{ status_code }}</h2>
+    <a class="vignette-link" href="{{ path('stades_stades_homepage') }}">Retour à l'accueil</a>
+{% endblock %}

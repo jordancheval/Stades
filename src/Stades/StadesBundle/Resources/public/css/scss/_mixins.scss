@@ -1,0 +1,15 @@
+@import 'dimen';
+@import 'fonts';
+@import 'colors';
+
+@mixin InputSubRes() {
+    display: inline-block;
+    text-decoration: none;
+    color: $cInputSubRes;
+    padding: $pInputSubRes;
+    margin: $mInputSubRes;
+    font-size: $fsInputSubRes;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}

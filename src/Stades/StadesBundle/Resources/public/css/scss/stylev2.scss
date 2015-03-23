@@ -1,0 +1,345 @@
+@import 'colors';
+@import 'fonts';
+@import 'dimen';
+@import 'mixins';
+
+/*----- HTML & BODY -----*/
+html, body {
+    margin: 0;
+    font-family: $font;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+/*----- HEADER -----*/
+.header {
+    display: inline-block;
+    width: $wHeader;
+    position: fixed !important;
+    border-bottom: $bbHeader;
+    z-index: 1000;
+    background-color: $bcHeader;
+    font-size: $fsHeader;
+    box-shadow: $bsHeader;
+    opacity: 0.9;
+
+    .btn-menu, .btn-search {
+        display: inline-block;
+        width: $pictHeader;
+        height: $pictHeader;
+        vertical-align: top;
+        cursor: pointer;
+    }
+    
+    .btn-menu .img-menu {
+        width: $pictHeader;
+        height: $pictHeader;
+    }
+    
+    .title {
+        display: inline-block;
+        line-height: $lhHeader;
+    }
+  
+    .form-search {
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        background-color: $bcHeader;
+        line-height: $lhHeader;
+  
+        form #stade_search {
+            display: none;
+        }
+    }
+}
+
+/*----- MENU -----*/
+.menu {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    height: $hMenu;
+    border-right: $brMenu;
+    background-color: $bcMenu;
+    font-size: $fsMenu !important;
+    width: $wMenu;
+    padding: $pMenu;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    .titre-sous-menu {
+        padding: $pTitreSousMenu;
+        border-bottom: $bbTitreSousMenu;
+        border-top: $btTitreSousMenu;
+        font-size: $fsMenu;
+        font-weight: bold;
+    }
+  
+    .marginMenuTop {
+        height: $mtMenu;
+        display: block;
+        margin: 0; }
+  
+    &-liste {
+        margin-top: $mtMenuListe;
+        padding-left: $plMenuListe;
+  
+        &-link {
+            display: inline-block;
+            list-style: none;
+            padding: $pMenuListeLink;
+            text-decoration: none;
+            color: $cMenuListeLink;
+            width: $wMenuListeLink;
+            //min-height: 40px;
+            //margin: 5px 12px;
+            //border: 1px solid #b4b4b4;
+            //border-radius: 10px;
+            background-color: $bcMenuListeLink;
+    
+            &:hover {
+                background-color: $bchMenuListeLink;
+            }
+      
+            &-element {
+                list-style: none !important;
+                
+                img {
+                    border: none;
+                }
+            }
+        }
+    }
+        
+    .selected {
+        background-color: $bcMenuSelected;
+    }
+}
+
+/*----- TO TOP -----*/
+.to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 510;
+  display: none; }
+
+/*----- CONTENT -----*/
+.content {
+    position: absolute;
+    text-align: center;
+    top: $tContent;
+    bottom: $bContent;
+    right: $rContent;
+    left: $lContent;
+    background-color: $bcContent;
+    //background: url(images/fond-mobile.jpg);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    width: $wContent;
+    //max-height: 100%;
+    overflow-y: auto;
+
+    .article {
+        margin: $mArticle;
+        text-align: justify;
+        font-size: $fsArticle;
+        background-color: $bcArticle;
+        padding: $pArticle;
+        border-radius: 2px;
+        box-shadow: $bsArticle; 
+    }
+    
+    .container-description {
+        position: absolute;
+        z-index: 500;
+        display: inline-block;
+        top: $tContainerDescription;
+        right: $rContainerDescription;
+        text-align: right;
+    
+        .toggle-description {
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            line-height: $lnToggleDescription;
+            width: $wToggleDescription;
+            height: $hToggleDescription;
+            background-color: $bcToggleDescription;
+            border-radius: 50em;
+            z-index: 510;
+            box-shadow: $bsToggleDescription;
+        }
+        
+        .description-toggle-actif {
+            box-shadow: none!important;
+        }
+        
+        .content-description {
+            display: none;
+            margin-top: $mtContentDescription;
+            text-align: left;
+            background-color: $bcContentDescription;
+            padding: $pContentDescription;
+            border-radius: 2px;
+            box-shadow: $bsContentDescription;
+            font-size: $fsContentDescription;
+        
+            input {
+                width: $wContentDescriptionInput;
+            }
+        }
+    }
+            
+    .vignette {
+        display: block;
+        width: $wVignette;
+        text-align: center;
+        background-color: $bcVignette;
+        margin: $mVignette;
+        padding: $pVignette;
+        box-shadow: $bsVignette;
+        border-radius: 2px;
+    
+        h2 {
+            color: $cVignetteH2;
+            font-size: $fsVignetteH2;
+            
+            @media (max-width: 330px) {
+                font-size : $fsVignetteH2_330;
+            }
+        }
+        
+        .vignette-link {
+            display: inline-block;
+            text-decoration: none;
+            color: $cVignetteLink;
+            background-color: $bcVignetteLink;
+            padding: $pVignetteLink;
+            margin: $mVignetteLink;
+            font-size: $fsVignetteLink;
+            border-radius: 2px;
+            
+            &:hover, &:focus {
+                background-color: $bchVignetteLink;
+            }
+        }
+    
+        .resetting {
+            background-color: $bcResetting;
+            
+            &:hover, &:focus {
+                background-color: $bchResetting;
+            }
+        }
+    
+        .form-row {
+            display: block;
+            margin: $mFormRow;
+            padding: $pFormRow;
+        
+            .form-error {
+                display: block;
+            }
+        
+            .form-label, .form-input {
+                //width: 180px;
+                @extend .form-error;
+                padding: $pFormRowLabInp;
+                text-align: left;
+                
+                @media (max-width: 600px) {
+                    overflow-x : hidden;
+                }
+            }
+        
+            .required-input {
+                color: $cRequiredInput;
+            }
+        
+            .valign-top {
+                vertical-align: top;
+            }
+        }
+    }
+  
+    .list-title-result {
+        display: block;
+        text-align: left;
+        font-weight: bold;
+        color: #8C8C8C;
+        padding: $pListTitleResult;
+        font-size: $fsListTitleResult;
+    }
+    
+    .vignette-result {
+        display: block;
+        text-align: left;
+        text-decoration: none;
+        color: $cVignetteResult;
+        background-color: $bcVignetteResult;
+        padding: $pVignetteResult;
+        transition: background-color 0.2s ease-in-out;
+        
+        &:hover, &:focus {
+            background-color: $bchVignetteResult;
+        }
+    }
+  
+    .text-align-center {
+        text-align: center !important;
+    }
+  
+    .sonata-ba-form {
+        text-align: left;
+    }
+}
+
+/*----- FILTER -----*/
+.filter {
+  background-color: $bcFilter;
+  opacity: 0.4;
+  display: none;
+  position: fixed;
+  width: $wFilter;
+  height: $hFilter;
+  z-index: 900;
+}
+
+/*----- HIDDEN -----*/
+.hidden {
+    display: none !important;
+}
+
+/*----- INPUT -----*/
+input[type=text], input[type=email], input[type=password] {
+    border: none;
+    border-bottom: $bbInputText;
+    background-color: $bcInputText;
+}
+
+input, button {    
+    &[type=submit] {
+        @include InputSubRes;
+        background-color: $bcSubmit;
+    
+        &:hover, &:focus {
+            background-color: $bchSubmit;
+        } 
+    }
+    
+    &[type=reset] {
+        @include InputSubRes;
+        background-color: $bcReset;
+    
+        &:hover, &:focus {
+            background-color: $bchReset;
+        }
+    }
+}

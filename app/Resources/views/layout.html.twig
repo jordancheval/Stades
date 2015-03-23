@@ -8,10 +8,10 @@
     {% block add_stylesheets %}
 
     {% endblock %}
-    {% stylesheets '@StadesStadesBundle/Resources/public/css/style.css' %}
+    {% stylesheets filter='?yui_css' '@StadesStadesBundle/Resources/public/css/stylev2.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
-    {% javascripts '@StadesStadesBundle/Resources/public/js/jquery-1.9.1.min.js' %}
+    {% javascripts filter='?yui_js' '@StadesStadesBundle/Resources/public/js/jquery-1.9.1.min.js' %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
     {% block add_javascripts %}
