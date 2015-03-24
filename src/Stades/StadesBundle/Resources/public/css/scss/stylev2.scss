@@ -142,6 +142,14 @@ html, body {
     width: $wContent;
     //max-height: 100%;
     overflow-y: auto;
+    
+    .map{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
 
     .article {
         margin: $mArticle;
@@ -338,5 +346,14 @@ input, button {
         &:hover, &:focus {
             background-color: $bchReset;
         }
+    }
+}
+
+/*----- DELETE -----*/
+.delete {
+    background-color: $bcDelete !important;
+    
+    &:hover {
+        background-color: $bchDelete !important;
     }
 }

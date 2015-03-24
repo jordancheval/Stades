@@ -11,13 +11,13 @@
 {% block stades_view %}
     <div class="vignette">
         <h2>Supprimer un stade</h2>
-        <p>Voulez-vous vraiment supprimer le stade de {{ stade.nomStade }}</p>
+        <p>Voulez-vous vraiment supprimer le stade de {{ stade.nomStade }} ?</p>
     
         <form action="{{ path('stades_stades_delete', {'id': stade.id}) }}" method="POST">
-            <a href="{{ path('stades_stades_view', {'id': stade.id}) }}" class="btn btn-default">
+            <a href="{{ path('stades_stades_view', {'id': stade.id}) }}" class="vignette-link">
                 Retour au stade
             </a>
-            <input type="submit" value="Supprimer" />
+            <input class="delete" type="submit" value="Supprimer" />
             {{ form_rest(form) }}
         </form>
     </div>
