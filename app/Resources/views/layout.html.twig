@@ -11,8 +11,8 @@
     {% stylesheets filter='?yui_css' '@StadesStadesBundle/Resources/public/css/stylev2.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
-    {% javascripts filter='?yui_js' '@StadesStadesBundle/Resources/public/js/jquery-1.9.1.min.js' %}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% javascripts %}
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     {% endjavascripts %}
     {% block add_javascripts %}
         
