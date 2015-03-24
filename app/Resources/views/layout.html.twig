@@ -8,12 +8,10 @@
     {% block add_stylesheets %}
 
     {% endblock %}
-    {% stylesheets filter='?yui_css' '@StadesStadesBundle/Resources/public/css/stylev2.css' %}
+    {% stylesheets filter='cssrewrite,?yui_css' '@StadesStadesBundle/Resources/public/css/stylev2.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
-    {% javascripts %}
-        <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    {% endjavascripts %}
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     {% block add_javascripts %}
         
     {% endblock %}
@@ -21,9 +19,7 @@
 <body>
     <!-- HEADER -->
     <div class="header">
-        <div class="btn-menu">
-            <img class="img-menu" src="{{ asset('images/btn-menu.png') }}" alt="Menu">
-        </div>
+        <div class="btn-menu"></div>
         <div class="title">
             {% block stades_sub_title %}
             {% endblock %}

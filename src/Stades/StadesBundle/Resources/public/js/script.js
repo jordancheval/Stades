@@ -14,7 +14,7 @@ jQuery(document).ready(function(){
         description = jQuery(".content-description"),
         lienBtnBack = "/Stades/web/images/btn-back.png",
         lienBtnMenu = "/Stades/web/images/btn-menu.png",
-        btnMenu = jQuery('.btn-menu').children("img"),
+        btnMenu = jQuery('.btn-menu'),
         searchInput = jQuery("#stade_search"),
         speed = 150;
     
@@ -41,7 +41,7 @@ jQuery(document).ready(function(){
             jQuery(".filter").fadeOut(speed);
             jQuery(".content").removeClass("flou");
             touchMoveOn();
-            btnMenu.attr("src", lienBtnMenu);
+            btnMenu.css("background-position", "0 0");
         }
         else{
             menu.animate({marginLeft: 0}, speed);
@@ -51,7 +51,7 @@ jQuery(document).ready(function(){
             jQuery(".filter").fadeIn(speed);
             jQuery(".content").addClass("flou");
             touchMoveOff();
-            btnMenu.attr("src", lienBtnBack);
+            btnMenu.css("background-position", "-40px 0");
         }
     }
     
@@ -69,7 +69,7 @@ jQuery(document).ready(function(){
             jQuery(".filter").fadeOut(speed);
             jQuery(".content").removeClass("flou");
             touchMoveOn();
-            btnMenu.attr("src", lienBtnMenu);
+            btnMenu.css("background-position", "0 0");
         }
     }
     
@@ -111,38 +111,6 @@ jQuery(document).ready(function(){
         else{
             toTop.fadeOut(speed);
         }
-    }*/
-    
-    
-    /*
-     * rewriteTitle
-     * 
-     * Permer de réécrire le titre du menu en fonction de l'outil sélectionné
-     */
-    /*function rewriteTitle(element){
-        if(element != "Menu")
-            jQuery(".title").text("Outil actuel : " + element.children(".menu-liste-link-element").children("img").attr("alt"));
-        else
-            jQuery(".title").text(element);
-    }*/
-    
-    
-    /*
-     * toSelect
-     * 
-     * Permet de voir si l'outil doit être sélectionné et changer le titre ou si c'est simplement un bouton
-     */
-    /*function toSelect(element){
-        if(element.hasClass("to-select")){
-            jQuery(".menu-liste-link").removeClass("selected");
-            element.addClass("selected");
-            hideMenuOnly();
-            rewriteTitle(element);
-        }
-        else{
-            hideMenuOnly();
-        }
-        
     }*/
     
     /**

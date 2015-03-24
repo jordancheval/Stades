@@ -27,17 +27,14 @@ html, body {
     box-shadow: $bsHeader;
     opacity: 0.9;
 
-    .btn-menu, .btn-search {
-        display: inline-block;
-        width: $pictHeader;
-        height: $pictHeader;
-        vertical-align: top;
-        cursor: pointer;
+    .btn-menu {
+        @include ImgHeader();
+        background-position: 0 0;
     }
     
-    .btn-menu .img-menu {
-        width: $pictHeader;
-        height: $pictHeader;
+    .btn-search {
+        @include ImgHeader();
+        background-position: -80px 0;
     }
     
     .title {

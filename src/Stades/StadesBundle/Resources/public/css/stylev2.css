@@ -20,15 +20,24 @@ html, body {
   font-size: 1em;
   box-shadow: 0 0 20px #000;
   opacity: 0.9; }
-  .header .btn-menu, .header .btn-search {
+  .header .btn-menu {
     display: inline-block;
     width: 40px;
     height: 40px;
     vertical-align: top;
-    cursor: pointer; }
-  .header .btn-menu .img-menu {
+    cursor: pointer;
+    background-image: url("../../../images/sprite.png");
+    background-repeat: no-repeat;
+    background-position: 0 0; }
+  .header .btn-search {
+    display: inline-block;
     width: 40px;
-    height: 40px; }
+    height: 40px;
+    vertical-align: top;
+    cursor: pointer;
+    background-image: url("../../../images/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -80px 0; }
   .header .title {
     display: inline-block;
     line-height: 40px; }

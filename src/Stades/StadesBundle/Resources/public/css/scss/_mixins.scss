@@ -13,3 +13,13 @@
     border: none;
     cursor: pointer;
 }
+
+@mixin ImgHeader() {
+    display: inline-block;
+    width: $pictHeader;
+    height: $pictHeader;
+    vertical-align: top;
+    cursor: pointer;
+    background-image: url("../../../images/sprite.png");
+    background-repeat: no-repeat;
+}
