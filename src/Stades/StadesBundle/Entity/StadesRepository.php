@@ -38,10 +38,14 @@ class StadesRepository extends EntityRepository
     
     public function getListStades($query)
     {
+        $queryWithDash = str_replace(' ', '-', $query);
+        
         return $this->createQueryBuilder('a')
                 ->select('a.id, a.nomStade')
                 ->where('a.nomStade LIKE :nomStade')
+                ->orWhere('a.nomStade LIKE :nomStadeWithDash')
                 ->setParameter('nomStade', '%'.$query.'%')
+                ->setParameter('nomStadeWithDash', '%'.$queryWithDash.'%')
                 ->orderBy('a.nomStade', 'ASC')
                 ->getQuery()
                 ->getResult()

@@ -12,8 +12,6 @@ jQuery(document).ready(function(){
         toTop = jQuery(".to-top"),
         toggleDescription = jQuery(".toggle-description"),
         description = jQuery(".content-description"),
-        lienBtnBack = "/Stades/web/images/btn-back.png",
-        lienBtnMenu = "/Stades/web/images/btn-menu.png",
         btnMenu = jQuery('.btn-menu'),
         searchInput = jQuery("#stade_search"),
         speed = 150;

@@ -17,7 +17,7 @@
     
 <form action="{{ path('stades_stades_searchResults') }}" method="POST">
     <div class="btn-search"></div>
-    <input type="text" id="stade_search" name="nomStade" required="required"/>
+    <input type="text" placeholder="Chercher un club" id="stade_search" name="nomStade" required="required"/>
     <input class="hidden" type="submit" value="Rechercher" />
     {{ form_rest(formSearch) }}
 </form>

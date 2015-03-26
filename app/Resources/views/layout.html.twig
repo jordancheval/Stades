@@ -8,7 +8,9 @@
     {% block add_stylesheets %}
 
     {% endblock %}
-    {% stylesheets filter='cssrewrite,?yui_css' '@StadesStadesBundle/Resources/public/css/stylev2.css' %}
+    {% stylesheets filter='cssrewrite,?yui_css'
+        '@StadesStadesBundle/Resources/public/css/stylev2.css'
+        '@StadesStadesBundle/Resources/public/css/cookies.css'%}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -48,7 +50,9 @@
     <!-- DIV pour le filtre noir quand le menu est ouvert -->
     <div class="filter"></div>
 
-    {% javascripts filter='?yui_js' '@StadesStadesBundle/Resources/public/js/script.js' %}
+    {% javascripts filter='?yui_js'
+        '@StadesStadesBundle/Resources/public/js/script.js'
+        '@StadesStadesBundle/Resources/public/js/cookies.js'%}
         <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
 </body>
