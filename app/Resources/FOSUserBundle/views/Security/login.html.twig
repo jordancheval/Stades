@@ -10,7 +10,13 @@
 
 {% block fos_user_content %}
 {% if error %}
-    <div>{{ error|trans({}, 'FOSUserBundle') }}</div>
+    <div class="form-row">
+        <div class="form-error">
+            <ul>
+                <li>{{ error|trans({}, 'FOSUserBundle') }}</li>
+            </ul>
+        </div>
+    </div>
 {% endif %}
 
 <h2>Connexion</h2>

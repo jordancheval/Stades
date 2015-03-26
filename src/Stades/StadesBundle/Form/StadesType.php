@@ -17,8 +17,14 @@ class StadesType extends AbstractType
         $builder
             ->add('nomStade', 'text', array('required' => true))
             ->add('adresseStade', 'text')
-            ->add('latitude', 'text', array('required' => true))
-            ->add('longitude', 'text', array('required' => true))
+            ->add('latitude', 'number', array(
+                    'required' => true,
+                    'invalid_message' => 'Veuillez indiquer une latitude valide'
+              ))
+            ->add('longitude', 'number', array(
+                    'required' => true,
+                    'invalid_message' => 'Veuillez indiquer une longitude valide'
+              ))
             ->add('typeTerrain', 'entity', array(
                 'class' => 'StadesStadesBundle:TypeTerrain',
                 'property' => 'typeTerrain',

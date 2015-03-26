@@ -251,11 +251,27 @@ html, body {
         
             .form-error {
                 display: block;
+                background-color: $bcFormError;
+                border-radius: 2px;
+                
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    
+                    li {
+                        padding: $pFormErrorLi;
+                        color: $cFormErrorLi;
+                        font-weight: bold;
+                        font-size: $fsFormErrorLi;
+                    }
+                }
             }
         
             .form-label, .form-input {
                 //width: 180px;
                 @extend .form-error;
+                background-color: transparent;
+                border-radius: 0;
                 padding: $pFormRowLabInp;
                 text-align: left;
                 
