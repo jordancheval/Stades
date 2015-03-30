@@ -7,7 +7,7 @@ jQuery(document).ready(function(){
      * speed     : vitesse des animations
      */
     var menu = jQuery(".menu"),
-        menuWidth = menu.outerWidth(true),
+        menuWidth = menu.innerWidth(),
         header = jQuery(".header"),
         toTop = jQuery(".to-top"),
         toggleDescription = jQuery(".toggle-description"),
@@ -17,11 +17,13 @@ jQuery(document).ready(function(){
         speed = 150;
     
     /*
-     * Initialisation - On rentre le menu 
+     * Initialisation
      * 
      * NOTE : Pour cette version le lien "To top" n'apparaît pas, la fonction et les appels de fonctions sont donc en commentaires
+     * 
+     * Plus besoin de rentrer le menu
      */
-    menu.animate({marginLeft: "-" + menuWidth}, 0);
+    //menu.animate({marginLeft: "-" + menuWidth}, 0);
     //top();
     
     

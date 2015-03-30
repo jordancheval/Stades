@@ -62,10 +62,11 @@ html, body {
     top: 0;
     z-index: 999;
     height: $hMenu;
-    border-right: $brMenu;
+    border-right: none;
     background-color: $bcMenu;
     font-size: $fsMenu !important;
     width: $wMenu;
+    margin-left: -$wMenu;
     padding: $pMenu;
     overflow-y: auto;
     overflow-x: hidden;
@@ -117,6 +118,10 @@ html, body {
     .selected {
         background-color: $bcMenuSelected;
     }
+}
+
+.actif {
+    border-right: $brMenu;
 }
 
 /*----- TO TOP -----*/
@@ -195,6 +200,7 @@ html, body {
             border-radius: 2px;
             box-shadow: $bsContentDescription;
             font-size: $fsContentDescription;
+            border: none !important;
         
             input {
                 width: $wContentDescriptionInput;

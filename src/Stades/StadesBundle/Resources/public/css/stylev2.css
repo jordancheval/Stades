@@ -57,10 +57,11 @@ html, body {
   top: 0;
   z-index: 999;
   height: 100%;
-  border-right: 1px solid #b4b4b4;
+  border-right: none;
   background-color: #fff;
   font-size: 0.9em !important;
   width: 180px;
+  margin-left: -180px;
   padding: 0;
   overflow-y: auto;
   overflow-x: hidden; }
@@ -93,6 +94,9 @@ html, body {
           border: none; }
   .menu .selected {
     background-color: #25bcff; }
+
+.actif {
+  border-right: 1px solid #b4b4b4; }
 
 /*----- TO TOP -----*/
 .to-top {
@@ -157,7 +161,8 @@ html, body {
       padding: 50px 15px 5px 15px;
       border-radius: 2px;
       box-shadow: 0 3px 8px #a3a3a3;
-      font-size: 0.9em; }
+      font-size: 0.9em;
+      border: none !important; }
       .content .container-description .content-description input {
         width: 100%; }
   .content .vignette {
