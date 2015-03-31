@@ -19,10 +19,12 @@ class StadesType extends AbstractType
             ->add('adresseStade', 'text')
             ->add('latitude', 'number', array(
                     'required' => true,
+                    'precision' => 6,
                     'invalid_message' => 'Veuillez indiquer une latitude valide'
               ))
             ->add('longitude', 'number', array(
                     'required' => true,
+                    'precision' => 6,
                     'invalid_message' => 'Veuillez indiquer une longitude valide'
               ))
             ->add('typeTerrain', 'entity', array(
