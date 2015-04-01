@@ -40,6 +40,9 @@ class StadesRepository extends EntityRepository
     {
         $queryWithDash = str_replace(' ', '-', $query);
         
+        $query = rtrim($query);
+        $queryWithDash = rtrim($queryWithDash);
+        
         return $this->createQueryBuilder('a')
                 ->select('a.id, a.nomStade')
                 ->where('a.nomStade LIKE :nomStade')
