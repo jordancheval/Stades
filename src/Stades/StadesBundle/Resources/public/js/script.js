@@ -88,12 +88,12 @@ jQuery(document).ready(function(){
      */
     function hideShowDescription(){
         if(description.hasClass("actif")){
-            description.fadeOut(speed);
+            description.slideUp(speed);
             description.removeClass("actif");
             toggleDescription.removeClass("description-toggle-actif");
         }
         else{
-            description.fadeIn(speed);
+            description.slideDown(speed);
             description.addClass("actif");
             toggleDescription.addClass("description-toggle-actif");
             hideMenuOnly();
@@ -105,7 +105,7 @@ jQuery(document).ready(function(){
      */
     function hideDescriptionOnly(){
         if(description.hasClass("actif")){
-            description.fadeOut(speed);
+            description.slideUp(speed);
             description.removeClass("actif");
             toggleDescription.removeClass("description-toggle-actif");
         }
