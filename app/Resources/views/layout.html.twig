@@ -27,6 +27,8 @@
             {% block stades_sub_title %}
             {% endblock %}
         </div>
+        {% block stades_description %}
+        {% endblock %}
         <div class="form-search">
             {{ render(controller("StadesStadesBundle:Stades:search")) }}
         </div>
@@ -41,10 +43,6 @@
     <div class="content">
         {% block stades_view %}
             
-        {% endblock %}
-        
-        {% block stades_view_description %}
-                            
         {% endblock %}
     </div>
     <!-- DIV pour le filtre noir quand le menu est ouvert -->

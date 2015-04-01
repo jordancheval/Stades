@@ -25,7 +25,6 @@ html, body {
     background-color: $bcHeader;
     font-size: $fsHeader;
     box-shadow: $bsHeader;
-    opacity: 0.9;
 
     .btn-menu {
         @include ImgHeader();
@@ -41,14 +40,41 @@ html, body {
         display: inline-block;
         line-height: $lhHeader;
     }
-  
+    
+    .toggle-description {
+        position: absolute;
+        top: $tToggleDescription;
+        right: $rToggleDescription;
+        @include ImgHeader();
+        background-position: -120px 0;
+    }
+            
+    .content-description {
+        display: none;
+        text-align: left;
+        background-color: $bcContentDescription;
+        padding: $pContentDescription;
+        border-radius: 2px;
+        font-size: $fsContentDescription;
+        border: none !important;
+
+        input {
+            width: $wContentDescriptionInput;
+        }
+    }
+    
+    .description-toggle-actif {
+        background-position: -160px 0;
+    }
+        
     .form-search {
         display: inline-block;
         position: absolute;
+        top: 0;
         right: 10px;
         background-color: $bcHeader;
         line-height: $lhHeader;
-  
+
         form #stade_search {
             display: none;
         }
@@ -164,48 +190,6 @@ html, body {
         padding: $pArticle;
         border-radius: 2px;
         box-shadow: $bsArticle; 
-    }
-    
-    .container-description {
-        position: absolute;
-        z-index: 500;
-        display: inline-block;
-        top: $tContainerDescription;
-        right: $rContainerDescription;
-        text-align: right;
-    
-        .toggle-description {
-            display: inline-block;
-            cursor: pointer;
-            text-align: center;
-            line-height: $lnToggleDescription;
-            width: $wToggleDescription;
-            height: $hToggleDescription;
-            background-color: $bcToggleDescription;
-            border-radius: 50em;
-            z-index: 510;
-            box-shadow: $bsToggleDescription;
-        }
-        
-        .description-toggle-actif {
-            box-shadow: none!important;
-        }
-        
-        .content-description {
-            display: none;
-            margin-top: $mtContentDescription;
-            text-align: left;
-            background-color: $bcContentDescription;
-            padding: $pContentDescription;
-            border-radius: 2px;
-            box-shadow: $bsContentDescription;
-            font-size: $fsContentDescription;
-            border: none !important;
-        
-            input {
-                width: $wContentDescriptionInput;
-            }
-        }
     }
             
     .vignette {

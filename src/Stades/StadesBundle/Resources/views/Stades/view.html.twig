@@ -12,38 +12,34 @@
     <iframe class="map" src="{{ urlEmbed }}" width="100%" height="100%" frameborder="0"></iframe>
 {% endblock %}
 
-{% block stades_view_description %}
-    <div class="container-description">
-        <div class="toggle-description">
-            <img src="{{ asset('bundles/stadesstades/css/images/file.png') }}" alt="Voir la fiche"/>
-        </div>
-        <div class="content-description">
-            <p>Stade de {{ stade.nomStade }}</p>
+{% block stades_description %}
+    <div class="toggle-description"></div>
+    <div class="content-description">
+        <p>Stade de {{ stade.nomStade }}</p>
 
-            <p>{{ stade.adresseStade }}</p>
+        <p>{{ stade.adresseStade }}</p>
     
-            {% if is_granted('ROLE_USER') %}
-                <input readonly="readonly" value="{{ url }}" onClick="this.select();" />
-            {% endif %}
+        {% if is_granted('ROLE_USER') %}
+            <input readonly="readonly" value="{{ url }}" onClick="this.select();" />
+        {% endif %}
 
-            <p>Ajouté le {{ stade.dateAjout|localizeddate('long', 'none', 'en') }}</p>
-            
-            {% if stade.typeTerrain is defined %}
-            <p>
-                {% if stade.typeTerrain|length > 1 %}
-                    Terrains
-                {% elseif stade.typeTerrain|length > 0 %}
-                    Terrain
-                {% else %}
-                    Terrain non renseigné.
-                {% endif %}
-                <ul>
-                {% for typeTerrain in stade.typeTerrain %}
-                    <li>{{ typeTerrain.typeTerrain }}</li>
-                {% endfor %}
-                </ul>
-            </p>
+        <p>Ajouté le {{ stade.dateAjout|localizeddate('long', 'none', 'en') }}</p>
+        
+        {% if stade.typeTerrain is defined %}
+        <p>
+            {% if stade.typeTerrain|length > 1 %}
+                Terrains
+            {% elseif stade.typeTerrain|length > 0 %}
+                Terrain
+            {% else %}
+                Terrain non renseigné.
             {% endif %}
-        </div>
+            <ul>
+            {% for typeTerrain in stade.typeTerrain %}
+                <li>{{ typeTerrain.typeTerrain }}</li>
+            {% endfor %}
+            </ul>
+        </p>
+        {% endif %}
     </div>
 {% endblock %}

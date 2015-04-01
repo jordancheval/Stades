@@ -2,13 +2,11 @@ jQuery(document).ready(function(){
     /*
      * menu      : div qui contient le menu
      * menuWidth : largeur du menu avec les marges
-     * header    : div qui contient le header
      * toTop     : lien qui permet de revenir en haut de la page
      * speed     : vitesse des animations
      */
     var menu = jQuery(".menu"),
         menuWidth = menu.innerWidth(),
-        header = jQuery(".header"),
         toTop = jQuery(".to-top"),
         toggleDescription = jQuery(".toggle-description"),
         description = jQuery(".content-description"),
@@ -36,7 +34,6 @@ jQuery(document).ready(function(){
         if(menu.hasClass("actif")){
             menu.animate({marginLeft: "-" + menuWidth}, speed);
             menu.removeClass("actif");
-            header.animate({opacity: 0.9}, speed);
             //top();
             jQuery(".filter").fadeOut(speed);
             jQuery(".content").removeClass("flou");
@@ -46,12 +43,12 @@ jQuery(document).ready(function(){
         else{
             menu.animate({marginLeft: 0}, speed);
             menu.addClass("actif");
-            header.animate({opacity: 1}, speed);
             //toTop.fadeOut(speed);
             jQuery(".filter").fadeIn(speed);
             jQuery(".content").addClass("flou");
             touchMoveOff();
             btnMenu.css("background-position", "-40px 0");
+            hideDescriptionOnly();
         }
     }
     
@@ -64,7 +61,6 @@ jQuery(document).ready(function(){
         if(menu.hasClass("actif")){
             menu.animate({marginLeft: "-" + menuWidth}, speed);
             menu.removeClass("actif");
-            header.animate({opacity: 0.9}, speed);
             //top();
             jQuery(".filter").fadeOut(speed);
             jQuery(".content").removeClass("flou");
@@ -100,6 +96,18 @@ jQuery(document).ready(function(){
             description.fadeIn(speed);
             description.addClass("actif");
             toggleDescription.addClass("description-toggle-actif");
+            hideMenuOnly();
+        }
+    }
+    
+    /**
+     * Fonction pour cacher la description seulement
+     */
+    function hideDescriptionOnly(){
+        if(description.hasClass("actif")){
+            description.fadeOut(speed);
+            description.removeClass("actif");
+            toggleDescription.removeClass("description-toggle-actif");
         }
     }
     
@@ -122,13 +130,22 @@ jQuery(document).ready(function(){
         searchInput.toggle(speed);
     }
     
+    /**
+     * hideSearchOnly
+     * 
+     * Permet de cacher la barre de recherche
+     */
+    function hideSearchOnly() {
+        searchInput.toggle(false, speed);
+    }
+    
     /*
      * Appels de fonctions en fonction des évènements
      */
     jQuery(".btn-menu").click(hideShowMenu);
     jQuery(".btn-search").click(function(){hideShowSearch(); searchInput.focus();});
     searchInput.focusout(hideShowSearch);
-    //jQuery(".content").click(hideMenuOnly);
+    jQuery(".content").click(hideSearchOnly);
     jQuery(".filter").click(hideMenuOnly);
     toggleDescription.click(hideShowDescription);
     //jQuery(".menu-liste-link").click(hideMenuOnly);

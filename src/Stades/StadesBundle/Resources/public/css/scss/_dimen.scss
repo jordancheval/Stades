@@ -2,6 +2,12 @@
 $pictHeader : 40px;
 $wHeader : 100%;
 
+$tToggleDescription : 0;
+$rToggleDescription : 60px;
+
+$pContentDescription : 0 15px 5px 15px;
+$wContentDescriptionInput : 100%;
+
 // Menu
 $hMenu : 100%;
 $wMenu : 180px;
@@ -25,16 +31,6 @@ $wContent : 100%;
 
 $mArticle : 10px;
 $pArticle : 10px 8px;
-
-$tContainerDescription : 60px;
-$rContainerDescription : 40px;
-
-$wToggleDescription : 50px;
-$hToggleDescription : $wToggleDescription;
-
-$mtContentDescription : -50px;
-$pContentDescription : 50px 15px 5px 15px;
-$wContentDescriptionInput : 100%;
 
 $wVignette : 70%;
 $mVignette : 8px auto;

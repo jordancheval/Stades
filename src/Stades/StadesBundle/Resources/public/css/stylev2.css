@@ -18,8 +18,7 @@ html, body {
   z-index: 1000;
   background-color: #fff;
   font-size: 1em;
-  box-shadow: 0 0 20px #000;
-  opacity: 0.9; }
+  box-shadow: 0 0 20px #000; }
   .header .btn-menu {
     display: inline-block;
     width: 40px;
@@ -41,9 +40,34 @@ html, body {
   .header .title {
     display: inline-block;
     line-height: 40px; }
+  .header .toggle-description {
+    position: absolute;
+    top: 0;
+    right: 60px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    vertical-align: top;
+    cursor: pointer;
+    background-image: url("../../../images/sprite.png");
+    background-repeat: no-repeat;
+    background-position: -120px 0; }
+  .header .content-description {
+    display: none;
+    text-align: left;
+    background-color: #fff;
+    padding: 0 15px 5px 15px;
+    border-radius: 2px;
+    font-size: 0.9em;
+    border: none !important; }
+    .header .content-description input {
+      width: 100%; }
+  .header .description-toggle-actif {
+    background-position: -160px 0; }
   .header .form-search {
     display: inline-block;
     position: absolute;
+    top: 0;
     right: 10px;
     background-color: #fff;
     line-height: 40px; }
@@ -133,38 +157,6 @@ html, body {
     padding: 10px 8px;
     border-radius: 2px;
     box-shadow: 0 2px 3px #7c7c7c; }
-  .content .container-description {
-    position: absolute;
-    z-index: 500;
-    display: inline-block;
-    top: 60px;
-    right: 40px;
-    text-align: right; }
-    .content .container-description .toggle-description {
-      display: inline-block;
-      cursor: pointer;
-      text-align: center;
-      line-height: 80px;
-      width: 50px;
-      height: 50px;
-      background-color: #fff;
-      border-radius: 50em;
-      z-index: 510;
-      box-shadow: 0 1px 6px #000; }
-    .content .container-description .description-toggle-actif {
-      box-shadow: none !important; }
-    .content .container-description .content-description {
-      display: none;
-      margin-top: -50px;
-      text-align: left;
-      background-color: #fff;
-      padding: 50px 15px 5px 15px;
-      border-radius: 2px;
-      box-shadow: 0 3px 8px #a3a3a3;
-      font-size: 0.9em;
-      border: none !important; }
-      .content .container-description .content-description input {
-        width: 100%; }
   .content .vignette {
     display: block;
     width: 70%;
