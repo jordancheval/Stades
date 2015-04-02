@@ -23,7 +23,7 @@
             <input readonly="readonly" value="{{ url }}" onClick="this.select();" />
         {% endif %}
 
-        <p>Ajouté le {{ stade.dateAjout|localizeddate('long', 'none', 'en') }}</p>
+        <p>Ajouté le {{ stade.dateAjout|localizeddate('long', 'none', 'fr') }}</p>
         
         {% if stade.typeTerrain is defined %}
         <p>
