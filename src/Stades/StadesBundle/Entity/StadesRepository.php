@@ -38,10 +38,8 @@ class StadesRepository extends EntityRepository
     
     public function getListStades($query)
     {
-        $queryWithDash = str_replace(' ', '-', $query);
-        
         $query = rtrim($query);
-        $queryWithDash = rtrim($queryWithDash);
+        $queryWithDash = str_replace(' ', '-', $query);
         
         return $this->createQueryBuilder('a')
                 ->select('a.id, a.nomStade')
