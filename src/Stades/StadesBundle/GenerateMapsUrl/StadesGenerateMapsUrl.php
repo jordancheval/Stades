@@ -3,7 +3,7 @@
 namespace Stades\StadesBundle\GenerateMapsUrl;
 
 class StadesGenerateMapsUrl {
-    private $baseUrl = "https://maps.google.com/maps?ll=";
+    private $baseUrl = "https://maps.google.com/maps?q=loc:";
     
     public function generateUrlEmbed($lat, $lon) {
         $url = $this->baseUrl . $lat . ',' .$lon . "&z=17&t=h&output=embed";
