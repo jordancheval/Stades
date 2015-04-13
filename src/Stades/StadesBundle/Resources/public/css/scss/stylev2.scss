@@ -126,8 +126,9 @@ html, body {
             //border: 1px solid #b4b4b4;
             //border-radius: 10px;
             background-color: $bcMenuListeLink;
+            @include transition(background-color, 0.2s, ease-in-out);
     
-            &:hover {
+            &:hover, &:focus {
                 background-color: $bchMenuListeLink;
             }
       
@@ -220,6 +221,7 @@ html, body {
             margin: $mVignetteLink;
             font-size: $fsVignetteLink;
             border-radius: 2px;
+            @include transition(background-color, 0.2s, ease-in-out);
             
             &:hover, &:focus {
                 background-color: $bchVignetteLink;
@@ -228,6 +230,7 @@ html, body {
     
         .resetting {
             background-color: $bcResetting;
+            @include transition(background-color, 0.2s, ease-in-out);
             
             &:hover, &:focus {
                 background-color: $bchResetting;
@@ -296,7 +299,7 @@ html, body {
         color: $cVignetteResult;
         background-color: $bcVignetteResult;
         padding: $pVignetteResult;
-        transition: background-color 0.2s ease-in-out;
+        @include transition(background-color, 0.2s, ease-in-out);
         
         &:hover, &:focus {
             background-color: $bchVignetteResult;
@@ -333,12 +336,19 @@ input[type=text], input[type=email], input[type=password] {
     border: none;
     border-bottom: $bbInputText;
     background-color: $bcInputText;
+    outline: none;
+    @include transition(border-bottom, 0.2s, ease-in-out);
+    
+    &:focus {
+        border-bottom: $bbInputTextFocus;
+    }
 }
 
 input, button {    
     &[type=submit] {
         @include InputSubRes;
         background-color: $bcSubmit;
+        @include transition(background-color, 0.2s, ease-in-out);
     
         &:hover, &:focus {
             background-color: $bchSubmit;
@@ -348,6 +358,7 @@ input, button {
     &[type=reset] {
         @include InputSubRes;
         background-color: $bcReset;
+        @include transition(background-color, 0.2s, ease-in-out);
     
         &:hover, &:focus {
             background-color: $bchReset;

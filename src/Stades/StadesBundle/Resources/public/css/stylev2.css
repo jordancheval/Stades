@@ -109,8 +109,13 @@ html, body {
       text-decoration: none;
       color: #000;
       width: 165px !important;
-      background-color: #fff; }
-      .menu-liste-link:hover {
+      background-color: #fff;
+      -webkit-transition: background-color 0.2s ease-in-out;
+      -moz-transition: background-color 0.2s ease-in-out;
+      -ms-transition: background-color 0.2s ease-in-out;
+      -o-transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out; }
+      .menu-liste-link:hover, .menu-liste-link:focus {
         background-color: #c5c5c5 !important; }
       .menu-liste-link-element {
         list-style: none !important; }
@@ -180,11 +185,21 @@ html, body {
       padding: 10px;
       margin: 5px;
       font-size: 0.9em;
-      border-radius: 2px; }
+      border-radius: 2px;
+      -webkit-transition: background-color 0.2s ease-in-out;
+      -moz-transition: background-color 0.2s ease-in-out;
+      -ms-transition: background-color 0.2s ease-in-out;
+      -o-transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out; }
       .content .vignette .vignette-link:hover, .content .vignette .vignette-link:focus {
         background-color: #636363; }
     .content .vignette .resetting {
-      background-color: #F44336; }
+      background-color: #F44336;
+      -webkit-transition: background-color 0.2s ease-in-out;
+      -moz-transition: background-color 0.2s ease-in-out;
+      -ms-transition: background-color 0.2s ease-in-out;
+      -o-transition: background-color 0.2s ease-in-out;
+      transition: background-color 0.2s ease-in-out; }
       .content .vignette .resetting:hover, .content .vignette .resetting:focus {
         background-color: #C62828; }
     .content .vignette .form-row {
@@ -229,6 +244,10 @@ html, body {
     color: #4f4f4f;
     background-color: #fff;
     padding: 15px 10px;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
     transition: background-color 0.2s ease-in-out; }
     .content .vignette-result:hover, .content .vignette-result:focus {
       background-color: #EFEFEF; }
@@ -255,7 +274,15 @@ html, body {
 input[type=text], input[type=email], input[type=password] {
   border: none;
   border-bottom: 1px solid #BEBEBE;
-  background-color: transparent; }
+  background-color: transparent;
+  outline: none;
+  -webkit-transition: border-bottom 0.2s ease-in-out;
+  -moz-transition: border-bottom 0.2s ease-in-out;
+  -ms-transition: border-bottom 0.2s ease-in-out;
+  -o-transition: border-bottom 0.2s ease-in-out;
+  transition: border-bottom 0.2s ease-in-out; }
+  input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+    border-bottom: 1px solid #3679F4; }
 
 input[type=submit], button[type=submit] {
   display: inline-block;
@@ -267,7 +294,12 @@ input[type=submit], button[type=submit] {
   border-radius: 2px;
   border: none;
   cursor: pointer;
-  background-color: #3679F4; }
+  background-color: #3679F4;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out; }
   input[type=submit]:hover, input[type=submit]:focus, button[type=submit]:hover, button[type=submit]:focus {
     background-color: #1C62E5; }
 input[type=reset], button[type=reset] {
@@ -280,7 +312,12 @@ input[type=reset], button[type=reset] {
   border-radius: 2px;
   border: none;
   cursor: pointer;
-  background-color: #A9A9A9; }
+  background-color: #A9A9A9;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  -moz-transition: background-color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out;
+  -o-transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out; }
   input[type=reset]:hover, input[type=reset]:focus, button[type=reset]:hover, button[type=reset]:focus {
     background-color: #676767; }
 

@@ -49,6 +49,11 @@
 
 .btn-accept {
     background-color: #009d00;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .btn-accept:hover, .btn-accept:focus {
@@ -57,6 +62,11 @@
 
 .btn-info {
     background-color: #3180ff;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .btn-info:hover, .btn-info:focus {
@@ -65,6 +75,11 @@
 
 .btn-refuse {
     background-color: #ff2d2d;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 }
 
 .btn-refuse:hover, .btn-refuse:focus {
