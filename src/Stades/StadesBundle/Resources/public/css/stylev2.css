@@ -259,7 +259,7 @@ html, body {
 /*----- FILTER -----*/
 .filter {
   background-color: #000;
-  opacity: 0.4;
+  opacity: 0.4 !important;
   display: none;
   position: fixed;
   width: 100%;

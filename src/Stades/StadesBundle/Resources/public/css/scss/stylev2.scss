@@ -318,7 +318,7 @@ html, body {
 /*----- FILTER -----*/
 .filter {
   background-color: $bcFilter;
-  opacity: 0.4;
+  opacity: 0.4 !important;
   display: none;
   position: fixed;
   width: $wFilter;

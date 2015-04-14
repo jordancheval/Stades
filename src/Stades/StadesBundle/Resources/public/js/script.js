@@ -32,19 +32,19 @@ jQuery(document).ready(function(){
      */
     function hideShowMenu(){
         if(menu.hasClass("actif")){
-            menu.animate({marginLeft: "-" + menuWidth}, speed);
+            menu.velocity({marginLeft: "-" + menuWidth}, speed);
             menu.removeClass("actif");
             //top();
-            jQuery(".filter").fadeOut(speed);
+            jQuery(".filter").velocity("fadeOut", speed);
             jQuery(".content").removeClass("flou");
             touchMoveOn();
             btnMenu.css("background-position", "0 0");
         }
         else{
-            menu.animate({marginLeft: 0}, speed);
+            menu.velocity({marginLeft: 0}, speed);
             menu.addClass("actif");
             //toTop.fadeOut(speed);
-            jQuery(".filter").fadeIn(speed);
+            jQuery(".filter").velocity("fadeIn", speed);
             jQuery(".content").addClass("flou");
             touchMoveOff();
             btnMenu.css("background-position", "-40px 0");
@@ -59,10 +59,10 @@ jQuery(document).ready(function(){
      */
     function hideMenuOnly(){
         if(menu.hasClass("actif")){
-            menu.animate({marginLeft: "-" + menuWidth}, speed);
+            menu.velocity({marginLeft: "-" + menuWidth}, speed);
             menu.removeClass("actif");
             //top();
-            jQuery(".filter").fadeOut(speed);
+            jQuery(".filter").velocity("fadeOut", speed);
             jQuery(".content").removeClass("flou");
             touchMoveOn();
             btnMenu.css("background-position", "0 0");
@@ -88,12 +88,12 @@ jQuery(document).ready(function(){
      */
     function hideShowDescription(){
         if(description.hasClass("actif")){
-            description.slideUp(speed);
+            description.velocity("slideUp", speed);
             description.removeClass("actif");
             toggleDescription.removeClass("description-toggle-actif");
         }
         else{
-            description.slideDown(speed);
+            description.velocity("slideDown", speed);
             description.addClass("actif");
             toggleDescription.addClass("description-toggle-actif");
             hideMenuOnly();
@@ -105,7 +105,7 @@ jQuery(document).ready(function(){
      */
     function hideDescriptionOnly(){
         if(description.hasClass("actif")){
-            description.slideUp(speed);
+            description.velocity("slideUp", speed);
             description.removeClass("actif");
             toggleDescription.removeClass("description-toggle-actif");
         }
