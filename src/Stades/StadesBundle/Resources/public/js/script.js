@@ -127,7 +127,13 @@ jQuery(document).ready(function(){
      * Permet d'afficher ou non la barre de recherche
      */
     function hideShowSearch() {
-        searchInput.toggle(speed);
+        //searchInput.toggle(speed);
+        if (searchInput.innerWidth() !== 0) {
+            searchInput.animate({width: 0}, speed);
+        }
+        else {
+            searchInput.animate({width: 150}, speed);
+        }
     }
     
     /**
@@ -136,7 +142,7 @@ jQuery(document).ready(function(){
      * Permet de cacher la barre de recherche
      */
     function hideSearchOnly() {
-        searchInput.toggle(false, speed);
+        searchInput.animate({width: 0}, speed);
     }
     
     /*

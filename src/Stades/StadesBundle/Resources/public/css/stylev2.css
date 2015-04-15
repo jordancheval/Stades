@@ -72,7 +72,8 @@ html, body {
     background-color: #fff;
     line-height: 40px; }
     .header .form-search form #stade_search {
-      display: none; }
+      width: 0;
+      padding: 0; }
 
 /*----- MENU -----*/
 .menu {
@@ -123,6 +124,9 @@ html, body {
           border: none; }
   .menu .selected {
     background-color: #25bcff; }
+
+.menu-actif {
+  background-position: -40px 0 !important; }
 
 .actif {
   border-right: 1px solid #b4b4b4; }
@@ -259,7 +263,6 @@ html, body {
 /*----- FILTER -----*/
 .filter {
   background-color: #000;
-  opacity: 0.4 !important;
   display: none;
   position: fixed;
   width: 100%;

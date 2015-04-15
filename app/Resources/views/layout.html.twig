@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta http-equiv="X-UA-Compatible" content="IE=10">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-with; initial-scale=1, user-scalable=no">
     <meta charset="UTF-8">
     <title>{% block stades_title %}{% endblock %} - Stades</title>
@@ -21,7 +21,7 @@
 <body>
     <!-- HEADER -->
     <div class="header">
-        <div class="btn-menu"></div>
+        <div id="btn-menu" class="btn-menu"></div>
         <div class="title">
             {% block stades_sub_title %}
             {% endblock %}
@@ -39,20 +39,30 @@
     <!-- LIEN TO TOP -->
     <a href="#" class="to-top">Go to top !</a>
     <!-- CONTENU -->
-    <div class="content">
+    <div id="content" class="content">
         {% block stades_view %}
             
         {% endblock %}
     </div>
     <!-- DIV pour le filtre noir quand le menu est ouvert -->
-    <div class="filter"></div>
+    <div id="filter" class="filter"></div>
     
     <!-- Javascripts -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
-    {% javascripts filter='?yui_js'
-        '@StadesStadesBundle/Resources/public/js/script.js'
-        '@StadesStadesBundle/Resources/public/js/cookies.js'%}
-        <script type="text/javascript" src="{{ asset_url }}"></script>
-    {% endjavascripts %}
+    <!--[if (!IE) | (gte IE 10) ]><!-->
+        {% javascripts filter='?yui_js'
+            '@StadesStadesBundle/Resources/public/js/velocity.min.js'
+            '@StadesStadesBundle/Resources/public/js/script_velocity.js'
+            '@StadesStadesBundle/Resources/public/js/cookies_velocity.js'%}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    <!--<![endif]-->
+    <!--[if lte IE 9]>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+        {% javascripts filter='?yui_js'
+            '@StadesStadesBundle/Resources/public/js/script.js'
+            '@StadesStadesBundle/Resources/public/js/cookies.js'%}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    <![endif]-->
 </body>
 </html>

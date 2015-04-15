@@ -76,7 +76,9 @@ html, body {
         line-height: $lhHeader;
 
         form #stade_search {
-            display: none;
+            //display: none;
+            width: 0;
+            padding: 0
         }
     }
 }
@@ -145,6 +147,10 @@ html, body {
     .selected {
         background-color: $bcMenuSelected;
     }
+}
+
+.menu-actif {
+    background-position: -40px 0 !important;
 }
 
 .actif {
@@ -318,7 +324,7 @@ html, body {
 /*----- FILTER -----*/
 .filter {
   background-color: $bcFilter;
-  opacity: 0.4 !important;
+  //opacity: 0.4 !important;
   display: none;
   position: fixed;
   width: $wFilter;
