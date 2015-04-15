@@ -39,7 +39,6 @@ function hideShowMenu(){
         //top();
         Velocity(filter, { opacity: 0 }, { display: "none" }, speed);
         content.classList.remove("flou");
-        touchMoveOn();
     }
     else{
         Velocity(menu, {marginLeft: 0}, speed);
@@ -48,7 +47,6 @@ function hideShowMenu(){
         //toTop.fadeOut(speed);
         Velocity(filter, { opacity: "0.4" }, { display: "block" }, speed);
         content.classList.add("flou");
-        touchMoveOff();
         hideDescriptionOnly();
     }
 }
@@ -66,22 +64,7 @@ function hideMenuOnly(){
         //top();
         Velocity(filter, { opacity: 0 }, { display: "none" }, speed);
         content.classList.remove("flou");
-        touchMoveOn();
     }
-}
-
-
-/*
- * touchMoveOff - Permet de désactiver les swipe au toucher
- * 
- * touchMoveOn - Permet d'activer les swipe au toucher
- */
-function touchMoveOff(){
-    content.addEventListener('touchmove', function(e){e.preventDefault()});
-}
-
-function touchMoveOn(){
-    content.removeEventListener('touchmove', function(e){e.preventDefault()});
 }
 
 /**
