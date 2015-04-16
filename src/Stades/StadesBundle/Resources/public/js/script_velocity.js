@@ -16,6 +16,15 @@ var menu = document.getElementById("menu"),
     filter = document.getElementById("filter"),
     content = document.getElementById("content"),
     speed = 150;
+    
+/**
+ * Detect if jQuery is present for Velocity
+ */
+if (window.jQuery) {
+    var V = $.Velocity;
+} else {
+    var V = Velocity;
+}
 
 /*
  * Initialisation
@@ -33,19 +42,19 @@ var menu = document.getElementById("menu"),
  */
 function hideShowMenu(){
     if(menu.classList.contains("actif")){
-        Velocity(menu, {marginLeft: "-" + menuWidth + "px"}, speed);
+        V(menu, {marginLeft: "-" + menuWidth + "px"}, speed);
         menu.classList.remove("actif");
         btnMenu.classList.remove("menu-actif");
         //top();
-        Velocity(filter, { opacity: 0 }, { display: "none" }, speed);
+        V(filter, { opacity: 0 }, { display: "none" }, speed);
         content.classList.remove("flou");
     }
     else{
-        Velocity(menu, {marginLeft: 0}, speed);
+        V(menu, {marginLeft: 0}, speed);
         menu.classList.add("actif");
         btnMenu.classList.add("menu-actif");
         //toTop.fadeOut(speed);
-        Velocity(filter, { opacity: "0.4" }, { display: "block" }, speed);
+        V(filter, { opacity: "0.4" }, { display: "block" }, speed);
         content.classList.add("flou");
         hideDescriptionOnly();
     }
@@ -58,11 +67,11 @@ function hideShowMenu(){
  */
 function hideMenuOnly(){
     if(menu.classList.contains("actif")){
-        Velocity(menu, {marginLeft: "-" + menuWidth}, speed);
+        V(menu, {marginLeft: "-" + menuWidth}, speed);
         menu.classList.remove("actif");
         btnMenu.classList.remove("menu-actif");
         //top();
-        Velocity(filter, { opacity: 0 }, { display: "none" }, speed);
+        V(filter, { opacity: 0 }, { display: "none" }, speed);
         content.classList.remove("flou");
     }
 }
@@ -72,12 +81,12 @@ function hideMenuOnly(){
  */
 function hideShowDescription(){
     if(description.classList.contains("actif")){
-        Velocity(description, "slideUp", speed);
+        V(description, "slideUp", speed);
         description.classList.remove("actif");
         toggleDescription.classList.remove("description-toggle-actif");
     }
     else{
-        Velocity(description, "slideDown", speed);
+        V(description, "slideDown", speed);
         description.classList.add("actif");
         toggleDescription.classList.add("description-toggle-actif");
         hideMenuOnly();
@@ -90,7 +99,7 @@ function hideShowDescription(){
 function hideDescriptionOnly(){
     if (toggleDescription !== null) {
         if(description.classList.contains("actif")){
-            Velocity(description, "slideUp", speed);
+            V(description, "slideUp", speed);
             description.classList.remove("actif");
             toggleDescription.classList.remove("description-toggle-actif");
         }
@@ -114,10 +123,10 @@ function hideDescriptionOnly(){
  */
 function hideShowSearch() {
     if (searchInputWidth !== 0) {
-        Velocity(searchInput, { width: 0 }, speed);
+        V(searchInput, { width: 0 }, speed);
     }
     else {
-        Velocity(searchInput, { width: 150 }, speed);
+        V(searchInput, { width: 150 }, speed);
         searchInput.focus();
     }
 }
@@ -128,7 +137,7 @@ function hideShowSearch() {
  * Permet de cacher la barre de recherche
  */
 function hideSearchOnly() {
-    Velocity(searchInput, { width: 0 }, speed);
+    V(searchInput, { width: 0 }, speed);
 }
 
 /*

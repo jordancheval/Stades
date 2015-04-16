@@ -123,10 +123,6 @@ html, body {
       transition: background-color 0.2s ease-in-out; }
       .menu-liste-link:hover, .menu-liste-link:focus {
         background-color: #c5c5c5 !important; }
-      .menu-liste-link-element {
-        list-style: none !important; }
-        .menu-liste-link-element img {
-          border: none; }
   .menu .selected {
     background-color: #25bcff; }
 

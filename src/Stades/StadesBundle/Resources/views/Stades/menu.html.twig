@@ -1,30 +1,22 @@
 <div id="menu" class="menu">
     <div class="marginMenuTop"></div>
-    <ul class="menu-liste">
+    <div class="menu-liste">
         <span class="titre-sous-menu">Stade</span>
-        <a class="menu-liste-link" href="{{ path('stades_stades_homepage') }}">
-            <li class="menu-liste-link-element">
-                Accueil
-            </li>
+        <a class="menu-liste-link" href="{{ path('stades_stades_homepage') }}">            
+            Accueil            
         </a>
         {% if is_granted('ROLE_USER') %}
-        <a class="menu-liste-link" href="{{ path('stades_stades_add') }}">
-            <li class="menu-liste-link-element">
-                Ajouter
-            </li>
+        <a class="menu-liste-link" href="{{ path('stades_stades_add') }}">            
+            Ajouter            
         </a>
             
         {% if app.request.attributes.get('_route') == 'stades_stades_view' %}
-        <a class="menu-liste-link" href="{{ path('stades_stades_edit', {'id' : stade.id}) }}">
-            <li class="menu-liste-link-element">
-                Modifier
-            </li>
+        <a class="menu-liste-link" href="{{ path('stades_stades_edit', {'id' : stade.id}) }}">           
+            Modifier           
         </a>
         {% if is_granted('ROLE_ADMIN') %}
-        <a class="menu-liste-link" href="{{ path('stades_stades_delete', {'id' : stade.id}) }}">
-            <li class="menu-liste-link-element">
-                Supprimer
-            </li>
+        <a class="menu-liste-link" href="{{ path('stades_stades_delete', {'id' : stade.id}) }}">            
+            Supprimer            
         </a>
         {% endif %}
         {% endif %}
@@ -32,38 +24,28 @@
         
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
         <span class="titre-sous-menu">{{ app.user.username }}</span>
-        <a class="menu-liste-link" href="{{ path('fos_user_security_logout') }}">
-            <li class="menu-liste-link-element">
-                Déconnexion
-            </li>
+        <a class="menu-liste-link" href="{{ path('fos_user_security_logout') }}">           
+            Déconnexion           
         </a>
-        <a class="menu-liste-link" href="{{ path('fos_user_profile_show') }}">
-            <li class="menu-liste-link-element">
-                Mon profil
-            </li>
+        <a class="menu-liste-link" href="{{ path('fos_user_profile_show') }}">           
+            Mon profil          
         </a>
         {% else %}
         <span class="titre-sous-menu">Se connecter</span>
         <a class="menu-liste-link" href="{{ path('fos_user_security_login') }}">
-            <li class="menu-liste-link-element">
-                Connexion
-            </li>
+            Connexion
         </a>
         {% endif %}
         
         {% if is_granted('ROLE_ADMIN') %}
         <span class="titre-sous-menu">Gestion utilisateurs</span>
         <a class="menu-liste-link" href="{{ path('sonata_admin_dashboard') }}">
-            <li class="menu-liste-link-element">
-                Utlisateurs
-            </li>
+            Utlisateurs
         </a>
         {% endif %}
         <span class="titre-sous-menu">A.S. Montigny-lès-Metz</span>
         <a class="menu-liste-link" href="http://asmontignylesmetz.fr" target="_blank">
-            <li class="menu-liste-link-element">
-                Aller sur le site
-            </li>
+            Aller sur le site
         </a>
-    </ul>
+    </div>
 </div>

@@ -138,14 +138,6 @@ html, body {
             &:hover, &:focus {
                 background-color: $bchMenuListeLink;
             }
-      
-            &-element {
-                list-style: none !important;
-                
-                img {
-                    border: none;
-                }
-            }
         }
     }
         
