@@ -1,8 +1,7 @@
 {% extends "StadesStadesBundle::layout.html.twig" %}
 
-{% block stades_title %}
-    {{ stade.nomStade }} {{ parent() }}
-{% endblock %}
+{% block stades_title %}Stade de {{ stade.nomStade }}{{ parent() }}{% endblock %}
+{% block meta_description %}Stade de {{ stade.nomStade }} - {{ stade.adresseStade }}{% endblock %}
 
 {% block stades_sub_title %}
     {{ stade.nomStade }}

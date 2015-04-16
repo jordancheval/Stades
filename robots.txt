@@ -1,0 +1,14 @@
+User-agent: Googlebot
+Disallow: /login
+Disallow: /admin
+User-agent: Slurp
+Disallow: /login
+Disallow: /admin
+User-agent: Bingbot
+Disallow: /login
+Disallow: /admin
+User-agent: DuckDuckBot
+Disallow: /login
+Disallow: /admin
+User-agent: *
+Disallow: /

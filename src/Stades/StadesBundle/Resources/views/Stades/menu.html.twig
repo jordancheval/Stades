@@ -1,7 +1,7 @@
 <div id="menu" class="menu">
     <div class="marginMenuTop"></div>
     <ul class="menu-liste">
-        <div class="titre-sous-menu">Stade</div>
+        <span class="titre-sous-menu">Stade</span>
         <a class="menu-liste-link" href="{{ path('stades_stades_homepage') }}">
             <li class="menu-liste-link-element">
                 Accueil
@@ -31,7 +31,7 @@
         {% endif %}
         
         {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-        <div class="titre-sous-menu">{{ app.user.username }}</div>
+        <span class="titre-sous-menu">{{ app.user.username }}</span>
         <a class="menu-liste-link" href="{{ path('fos_user_security_logout') }}">
             <li class="menu-liste-link-element">
                 Déconnexion
@@ -43,7 +43,7 @@
             </li>
         </a>
         {% else %}
-        <div class="titre-sous-menu">Se connecter</div>
+        <span class="titre-sous-menu">Se connecter</span>
         <a class="menu-liste-link" href="{{ path('fos_user_security_login') }}">
             <li class="menu-liste-link-element">
                 Connexion
@@ -52,14 +52,14 @@
         {% endif %}
         
         {% if is_granted('ROLE_ADMIN') %}
-        <div class="titre-sous-menu">Gestion utilisateurs</div>
+        <span class="titre-sous-menu">Gestion utilisateurs</span>
         <a class="menu-liste-link" href="{{ path('sonata_admin_dashboard') }}">
             <li class="menu-liste-link-element">
                 Utlisateurs
             </li>
         </a>
         {% endif %}
-        <div class="titre-sous-menu">A.S. Montigny-lès-Metz</div>
+        <span class="titre-sous-menu">A.S. Montigny-lès-Metz</span>
         <a class="menu-liste-link" href="http://asmontignylesmetz.fr" target="_blank">
             <li class="menu-liste-link-element">
                 Aller sur le site

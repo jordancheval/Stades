@@ -39,6 +39,10 @@ html, body {
     .title {
         display: inline-block;
         line-height: $lhHeader;
+        padding: $pTitleHeader;
+        margin: $mTitleHeader;
+        font-size: $fsH1Header;
+        font-weight: normal;
     }
     
     .toggle-description {
@@ -105,6 +109,7 @@ html, body {
         border-top: $btTitreSousMenu;
         font-size: $fsMenu;
         font-weight: bold;
+        display: block;
     }
   
     .marginMenuTop {
