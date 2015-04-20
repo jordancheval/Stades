@@ -49,11 +49,12 @@
     <div id="filter" class="filter"></div>
     
     <!-- Javascripts -->
+    {# Pour les trackers, utiliser cookies.js ou piwik.js #}
     <!--[if (!IE) | (gte IE 10) ]><!-->
         {% javascripts filter='?yui_js'
             '@StadesStadesBundle/Resources/public/js/velocity.min.js'
             '@StadesStadesBundle/Resources/public/js/script_velocity.js'
-            '@StadesStadesBundle/Resources/public/js/cookies_velocity.js'%}
+            '@StadesStadesBundle/Resources/public/js/piwik.js'%}
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     <!--<![endif]-->
@@ -61,7 +62,7 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
         {% javascripts filter='?yui_js'
             '@StadesStadesBundle/Resources/public/js/script.js'
-            '@StadesStadesBundle/Resources/public/js/cookies.js'%}
+            '@StadesStadesBundle/Resources/public/js/piwik.js'%}
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     <![endif]-->
