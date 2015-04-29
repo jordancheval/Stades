@@ -15,8 +15,16 @@
     <div id="toggle-description" class="toggle-description"></div>
     <div id="content-description" class="content-description">
         <p>Stade de {{ stade.nomStade }}</p>
-
-        <p>{{ stade.adresseStade }}</p>
+        
+        {% if stade.adresseStade is defined %}
+        <p>
+            {% if stade.adresseStade|length > 0 %}
+                {{ stade.adresseStade }}
+            {% else %}
+                Pas d'adresse.
+            {% endif %}
+        </p>
+        {% endif %}
     
         {% if is_granted('ROLE_USER') %}
             <input readonly="readonly" value="{{ url }}" onClick="this.select();" />

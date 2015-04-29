@@ -9,9 +9,9 @@
     {% block add_stylesheets %}
 
     {% endblock %}
+    {# Ajoutez cookies.css si vous utilisez cookies.js #}
     {% stylesheets filter='cssrewrite,?yui_css'
-        '@StadesStadesBundle/Resources/public/css/stylev2.css'
-        '@StadesStadesBundle/Resources/public/css/cookies.css'%}
+        '@StadesStadesBundle/Resources/public/css/stylev2.css' %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" />
     {% endstylesheets %}
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />

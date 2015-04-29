@@ -37,7 +37,7 @@ class Stades
     /**
      * @var string
      *
-     * @ORM\Column(name="adresse_stade", type="string", length=255)
+     * @ORM\Column(name="adresse_stade", type="string", length=255, nullable=true)
      */
     private $adresseStade;
 

@@ -16,7 +16,7 @@ class StadesType extends AbstractType
     {
         $builder
             ->add('nomStade', 'text', array('required' => true))
-            ->add('adresseStade', 'text')
+            ->add('adresseStade', 'text', array('required' => false))
             ->add('latitude', 'number', array(
                     'required' => true,
                     'precision' => 6,
