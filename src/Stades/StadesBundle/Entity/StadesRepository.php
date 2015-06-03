@@ -38,19 +38,42 @@ class StadesRepository extends EntityRepository
     
     public function getListStades($query)
     {
-        $query = rtrim($query);
+        $query = trim($query);
         $queryWithDash = str_replace(' ', '-', $query);
         
-        return $this->createQueryBuilder('a')
-                ->select('a.id, a.nomStade')
-                ->where('a.nomStade LIKE :nomStade')
-                ->orWhere('a.nomStade LIKE :nomStadeWithDash')
-                ->setParameter('nomStade', '%'.$query.'%')
-                ->setParameter('nomStadeWithDash', '%'.$queryWithDash.'%')
-                ->orderBy('a.nomStade', 'ASC')
-                ->getQuery()
-                ->getResult()
-        ;
+        $result = $this->createQueryBuilder('a')
+                        ->select('a.id, a.nomStade')
+                        ->where('a.nomStade LIKE :nomStade')
+                        ->orWhere('a.nomStade LIKE :nomStadeWithDash')
+                        ->setParameter('nomStade', '%'.$query.'%')
+                        ->setParameter('nomStadeWithDash', '%'.$queryWithDash.'%')
+                        ->orderBy('a.nomStade', 'ASC')
+                        ->getQuery()
+                        ->getResult();
+        
+        if ($result == null) {
+            $secondQuery = explode(' ', $query);
+            
+            $result = $this->createQueryBuilder('a')->select('a.id, a.nomStade');
+            
+            foreach ($secondQuery as $key => $value) {
+                if ($key == 0) {
+                    $result->where('a.nomStade LIKE :nomStade'.$key)
+                            ->setParameter('nomStade'.$key, '%'.$value.'%');
+                }
+                else {
+                    $result->orWhere('a.nomStade LIKE :nomStade'.$key)
+                            ->setParameter('nomStade'.$key, '%'.$value.'%');
+                }
+            }
+            
+            return $result->orderBy('a.nomStade', 'ASC')
+                        ->getQuery()
+                        ->getResult();
+        }
+        else {
+            return $result;
+        }
     }
     
     public function getCountStades() {

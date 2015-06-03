@@ -152,11 +152,12 @@ class StadesController extends Controller
         if ($request->isMethod('POST')) {
             $em = $this->getDoctrine()->getManager();
             $query = $request->get('nomStade');
-
-            $stades = $em->getRepository('StadesStadesBundle:Stades')->getListStades($query);
-
-            if (null === $stades) {
-                throw new NotFoundHttpException("Aucun résultat.");
+            
+            if ($query != null && trim($query) != "") {
+                $stades = $em->getRepository('StadesStadesBundle:Stades')->getListStades($query);
+            }
+            else {
+                $stades = null;
             }
             
             return $this->render('StadesStadesBundle:Stades:searchResults.html.twig', array(
