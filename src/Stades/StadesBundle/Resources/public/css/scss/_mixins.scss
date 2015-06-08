@@ -14,11 +14,11 @@
     cursor: pointer;
 }
 
-@mixin ImgHeader() {
+@mixin ImgIcone() {
     display: inline-block;
     width: $pictHeader;
     height: $pictHeader;
-    vertical-align: top;
+    vertical-align: middle;
     cursor: pointer;
     background-image: url("../../../images/sprite.png");
     background-repeat: no-repeat;

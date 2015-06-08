@@ -23,7 +23,7 @@ html, body {
     display: inline-block;
     width: 40px;
     height: 40px;
-    vertical-align: top;
+    vertical-align: middle;
     cursor: pointer;
     background-image: url("../../../images/sprite.png");
     background-repeat: no-repeat;
@@ -32,7 +32,7 @@ html, body {
     display: inline-block;
     width: 40px;
     height: 40px;
-    vertical-align: top;
+    vertical-align: middle;
     cursor: pointer;
     background-image: url("../../../images/sprite.png");
     background-repeat: no-repeat;
@@ -42,6 +42,7 @@ html, body {
     line-height: 40px;
     padding: 0;
     margin: 0;
+    vertical-align: middle;
     font-size: 1em;
     font-weight: normal; }
   .header .toggle-description {
@@ -51,11 +52,13 @@ html, body {
     display: inline-block;
     width: 40px;
     height: 40px;
-    vertical-align: top;
+    vertical-align: middle;
     cursor: pointer;
     background-image: url("../../../images/sprite.png");
     background-repeat: no-repeat;
-    background-position: -120px 0; }
+    background-position: -120px 0;
+    background-color: #fff;
+    box-shadow: -2px -1px 1px #fff; }
   .header .content-description {
     display: none;
     text-align: left;
@@ -73,8 +76,7 @@ html, body {
     position: absolute;
     top: 0;
     right: 10px;
-    background-color: #fff;
-    line-height: 40px; }
+    background-color: #fff; }
     .header .form-search form #stade_search {
       width: 0;
       padding: 0; }
@@ -96,7 +98,6 @@ html, body {
   overflow-x: hidden; }
   .menu .titre-sous-menu {
     padding: 5px 0 5px 5px;
-    border-bottom: 1px solid #b4b4b4;
     border-top: 1px solid #b4b4b4;
     font-size: 0.9em;
     font-weight: bold;
@@ -111,10 +112,10 @@ html, body {
     .menu-liste-link {
       display: inline-block;
       list-style: none;
-      padding: 14px 0 14px 15px;
+      padding: 0;
       text-decoration: none;
       color: #000;
-      width: 165px !important;
+      width: 100% !important;
       background-color: #fff;
       -webkit-transition: background-color 0.2s ease-in-out;
       -moz-transition: background-color 0.2s ease-in-out;
@@ -123,6 +124,80 @@ html, body {
       transition: background-color 0.2s ease-in-out; }
       .menu-liste-link:hover, .menu-liste-link:focus {
         background-color: #c5c5c5 !important; }
+      .menu-liste-link-text {
+        vertical-align: middle; }
+      .menu-liste-link .btn-home {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: url("../../../images/sprite.png");
+        background-repeat: no-repeat;
+        background-position: -320px 0; }
+      .menu-liste-link .btn-add {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: url("../../../images/sprite.png");
+        background-repeat: no-repeat;
+        background-position: -200px 0; }
+      .menu-liste-link .btn-edit {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: url("../../../images/sprite.png");
+        background-repeat: no-repeat;
+        background-position: -240px 0; }
+      .menu-liste-link .btn-delete {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: url("../../../images/sprite.png");
+        background-repeat: no-repeat;
+        background-position: -280px 0; }
+      .menu-liste-link .btn-power {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: url("../../../images/sprite.png");
+        background-repeat: no-repeat;
+        background-position: -400px 0; }
+      .menu-liste-link .btn-profile {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: url("../../../images/sprite.png");
+        background-repeat: no-repeat;
+        background-position: -360px 0; }
+      .menu-liste-link .btn-users {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: url("../../../images/sprite.png");
+        background-repeat: no-repeat;
+        background-position: -440px 0; }
+      .menu-liste-link .btn-website {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        cursor: pointer;
+        background-image: url("../../../images/sprite.png");
+        background-repeat: no-repeat;
+        background-position: -480px 0; }
   .menu .selected {
     background-color: #25bcff; }
 

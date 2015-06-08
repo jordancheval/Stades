@@ -27,12 +27,12 @@ html, body {
     box-shadow: $bsHeader;
 
     .btn-menu {
-        @include ImgHeader();
+        @include ImgIcone();
         background-position: 0 0;
     }
     
     .btn-search {
-        @include ImgHeader();
+        @include ImgIcone();
         background-position: -80px 0;
     }
     
@@ -41,6 +41,7 @@ html, body {
         line-height: $lhHeader;
         padding: $pTitleHeader;
         margin: $mTitleHeader;
+        vertical-align: middle;
         font-size: $fsH1Header;
         font-weight: normal;
     }
@@ -49,8 +50,10 @@ html, body {
         position: absolute;
         top: $tToggleDescription;
         right: $rToggleDescription;
-        @include ImgHeader();
+        @include ImgIcone();
         background-position: -120px 0;
+        background-color: $bcToggleDescription;
+        box-shadow: $bsToggleDescription;
     }
             
     .content-description {
@@ -77,7 +80,7 @@ html, body {
         top: 0;
         right: 10px;
         background-color: $bcHeader;
-        line-height: $lhHeader;
+        //line-height: $lhHeader;
 
         form #stade_search {
             //display: none;
@@ -105,7 +108,7 @@ html, body {
 
     .titre-sous-menu {
         padding: $pTitreSousMenu;
-        border-bottom: $bbTitreSousMenu;
+        //border-bottom: $bbTitreSousMenu;
         border-top: $btTitreSousMenu;
         font-size: $fsMenu;
         font-weight: bold;
@@ -137,6 +140,52 @@ html, body {
     
             &:hover, &:focus {
                 background-color: $bchMenuListeLink;
+            }
+            
+            &-text {
+                vertical-align: middle;
+            }
+            
+            .btn{          
+                &-home{
+                    @include ImgIcone();
+                    background-position: -320px 0;
+                }
+                
+                &-add{
+                    @include ImgIcone();
+                    background-position: -200px 0;
+                }
+                
+                &-edit{
+                    @include ImgIcone();
+                    background-position: -240px 0;
+                }
+                
+                &-delete{
+                    @include ImgIcone();
+                    background-position: -280px 0;
+                }
+                
+                &-power{
+                    @include ImgIcone();
+                    background-position: -400px 0;
+                }
+                
+                &-profile{
+                    @include ImgIcone();
+                    background-position: -360px 0;
+                }
+                
+                &-users{
+                    @include ImgIcone();
+                    background-position: -440px 0;
+                }
+                
+                &-website{
+                    @include ImgIcone();
+                    background-position: -480px 0;
+                }
             }
         }
     }

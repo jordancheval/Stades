@@ -7,7 +7,7 @@ $bcMenuSelected : #25bcff;
 
 $bcContent : #f4f4f4;
 $bcArticle : #fff;
-$bcToggleDescription : #fff;
+$bcToggleDescription : $bcHeader;
 $bcContentDescription : $bcToggleDescription;
 $bcVignette : #fff;
 $bcVignetteLink : #4f4f4f;
@@ -66,7 +66,8 @@ $bbInputTextFocus : 1px solid #3679F4;
 // Box-shadows
 $bsHeader : 0 0 20px #000;
 
+$bsToggleDescription: -2px -1px 1px #fff;
+
 $bsArticle : 0 2px 3px #7c7c7c;
-$bsToggleDescription : 0 1px 6px #000;
 $bsContentDescription : 0 3px 8px #a3a3a3;
 $bsVignette : 0 3px 8px #a3a3a3;
