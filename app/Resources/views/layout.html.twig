@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-with; initial-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-with, initial-scale=1, user-scalable=no">
     <meta name="mobile-web-app-capable" content="yes">
     <meta charset="UTF-8">
     <title>{% block stades_title %}{% endblock %} - Stades</title>
@@ -22,7 +22,7 @@
 </head>
 <body>
     <!-- HEADER -->
-    <div class="header">
+    <div id="header" class="header">
         <span id="btn-menu" class="btn-menu"></span>
         <h1 class="title">
             {% block stades_sub_title %}
@@ -42,6 +42,7 @@
     <a href="#" class="to-top">Go to top !</a>
     <!-- CONTENU -->
     <div id="content" class="content">
+        <div class="swipe"></div>
         {% block stades_view %}
             
         {% endblock %}
@@ -56,6 +57,7 @@
             '@StadesStadesBundle/Resources/public/js/velocity.min.js'
             '@StadesStadesBundle/Resources/public/js/script_velocity.js'
             '@StadesStadesBundle/Resources/public/js/piwik.js'%}
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.4/hammer.min.js"></script>
             <script type="text/javascript" src="{{ asset_url }}"></script>
         {% endjavascripts %}
     <!--<![endif]-->

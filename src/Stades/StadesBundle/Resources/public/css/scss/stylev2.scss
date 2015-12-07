@@ -227,6 +227,14 @@ html, body {
     //max-height: 100%;
     overflow-y: auto;
     
+    .swipe {
+       position: absolute;
+       background: #000;
+       top: 0;
+       bottom: 0;
+       width: 5%;
+    }
+    
     .map{
         position: absolute;
         top: 0;
