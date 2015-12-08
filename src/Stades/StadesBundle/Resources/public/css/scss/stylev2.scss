@@ -229,10 +229,10 @@ html, body {
     
     .swipe {
        position: absolute;
-       background: #000;
        top: 0;
        bottom: 0;
        width: 5%;
+       z-index: 1;
     }
     
     .map{

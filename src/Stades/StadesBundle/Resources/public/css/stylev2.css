@@ -228,6 +228,12 @@ html, body {
   background-attachment: scroll;
   width: 100%;
   overflow-y: auto; }
+  .content .swipe {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5%;
+    z-index: 1; }
   .content .map {
     position: absolute;
     top: 0;
